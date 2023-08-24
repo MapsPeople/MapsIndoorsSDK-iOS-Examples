@@ -1,0 +1,6 @@
+framework module Pods_MapsIndoorsSDK_iOS_Examples {
+  umbrella header "Pods-MapsIndoorsSDK-iOS-Examples-umbrella.h"
+
+  export *
+  module * { export * }
+}

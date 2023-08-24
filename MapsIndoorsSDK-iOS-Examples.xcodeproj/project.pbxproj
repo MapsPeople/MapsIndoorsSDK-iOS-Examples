@@ -1,0 +1,452 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		19DC72AC5D095A9FF5C8C2F9 /* Pods_MapsIndoorsSDK_iOS_Examples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A80925BE74AAD8A03986BE1A /* Pods_MapsIndoorsSDK_iOS_Examples.framework */; };
+		4DB9BEFB2A9769BE00C4D7FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9BEFA2A9769BE00C4D7FE /* AppDelegate.swift */; };
+		4DB9BEFD2A9769BE00C4D7FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9BEFC2A9769BE00C4D7FE /* SceneDelegate.swift */; };
+		4DB9BEFF2A9769BE00C4D7FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9BEFE2A9769BE00C4D7FE /* ViewController.swift */; };
+		4DB9BF022A9769BE00C4D7FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DB9BF002A9769BE00C4D7FE /* Main.storyboard */; };
+		4DB9BF042A9769BF00C4D7FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DB9BF032A9769BF00C4D7FE /* Assets.xcassets */; };
+		4DB9BF072A9769BF00C4D7FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DB9BF052A9769BF00C4D7FE /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4DB9BEF72A9769BE00C4D7FE /* MapsIndoorsSDK-iOS-Examples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MapsIndoorsSDK-iOS-Examples.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DB9BEFA2A9769BE00C4D7FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4DB9BEFC2A9769BE00C4D7FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4DB9BEFE2A9769BE00C4D7FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4DB9BF012A9769BE00C4D7FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4DB9BF032A9769BF00C4D7FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4DB9BF062A9769BF00C4D7FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4DB9BF082A9769BF00C4D7FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85CFFC50B8649D6E6055F47F /* Pods-MapsIndoorsSDK-iOS-Examples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapsIndoorsSDK-iOS-Examples.release.xcconfig"; path = "Target Support Files/Pods-MapsIndoorsSDK-iOS-Examples/Pods-MapsIndoorsSDK-iOS-Examples.release.xcconfig"; sourceTree = "<group>"; };
+		A80925BE74AAD8A03986BE1A /* Pods_MapsIndoorsSDK_iOS_Examples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapsIndoorsSDK_iOS_Examples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC0C3E97BFAF5A9EDEA2A24E /* Pods-MapsIndoorsSDK-iOS-Examples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapsIndoorsSDK-iOS-Examples.debug.xcconfig"; path = "Target Support Files/Pods-MapsIndoorsSDK-iOS-Examples/Pods-MapsIndoorsSDK-iOS-Examples.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4DB9BEF42A9769BE00C4D7FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19DC72AC5D095A9FF5C8C2F9 /* Pods_MapsIndoorsSDK_iOS_Examples.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4DB9BEEE2A9769BE00C4D7FE = {
+			isa = PBXGroup;
+			children = (
+				4DB9BEF92A9769BE00C4D7FE /* MapsIndoorsSDK-iOS-Examples */,
+				4DB9BEF82A9769BE00C4D7FE /* Products */,
+				FECDE2D606E0843158EAD7E9 /* Pods */,
+				B372EE05A608CD17591EF4CB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4DB9BEF82A9769BE00C4D7FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4DB9BEF72A9769BE00C4D7FE /* MapsIndoorsSDK-iOS-Examples.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4DB9BEF92A9769BE00C4D7FE /* MapsIndoorsSDK-iOS-Examples */ = {
+			isa = PBXGroup;
+			children = (
+				4DB9BEFA2A9769BE00C4D7FE /* AppDelegate.swift */,
+				4DB9BEFC2A9769BE00C4D7FE /* SceneDelegate.swift */,
+				4DB9BEFE2A9769BE00C4D7FE /* ViewController.swift */,
+				4DB9BF002A9769BE00C4D7FE /* Main.storyboard */,
+				4DB9BF032A9769BF00C4D7FE /* Assets.xcassets */,
+				4DB9BF052A9769BF00C4D7FE /* LaunchScreen.storyboard */,
+				4DB9BF082A9769BF00C4D7FE /* Info.plist */,
+			);
+			path = "MapsIndoorsSDK-iOS-Examples";
+			sourceTree = "<group>";
+		};
+		B372EE05A608CD17591EF4CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A80925BE74AAD8A03986BE1A /* Pods_MapsIndoorsSDK_iOS_Examples.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FECDE2D606E0843158EAD7E9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CC0C3E97BFAF5A9EDEA2A24E /* Pods-MapsIndoorsSDK-iOS-Examples.debug.xcconfig */,
+				85CFFC50B8649D6E6055F47F /* Pods-MapsIndoorsSDK-iOS-Examples.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4DB9BEF62A9769BE00C4D7FE /* MapsIndoorsSDK-iOS-Examples */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DB9BF0B2A9769BF00C4D7FE /* Build configuration list for PBXNativeTarget "MapsIndoorsSDK-iOS-Examples" */;
+			buildPhases = (
+				14234191E2205ED3512DC3C8 /* [CP] Check Pods Manifest.lock */,
+				4DB9BEF32A9769BE00C4D7FE /* Sources */,
+				4DB9BEF42A9769BE00C4D7FE /* Frameworks */,
+				4DB9BEF52A9769BE00C4D7FE /* Resources */,
+				15D4FF715C8547F47876C84F /* [CP] Embed Pods Frameworks */,
+				666C3D4B8AEF9991B7ABB1D5 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MapsIndoorsSDK-iOS-Examples";
+			productName = "MapsIndoorsSDK-iOS-Examples";
+			productReference = 4DB9BEF72A9769BE00C4D7FE /* MapsIndoorsSDK-iOS-Examples.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4DB9BEEF2A9769BE00C4D7FE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					4DB9BEF62A9769BE00C4D7FE = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 4DB9BEF22A9769BE00C4D7FE /* Build configuration list for PBXProject "MapsIndoorsSDK-iOS-Examples" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4DB9BEEE2A9769BE00C4D7FE;
+			productRefGroup = 4DB9BEF82A9769BE00C4D7FE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4DB9BEF62A9769BE00C4D7FE /* MapsIndoorsSDK-iOS-Examples */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4DB9BEF52A9769BE00C4D7FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DB9BF072A9769BF00C4D7FE /* LaunchScreen.storyboard in Resources */,
+				4DB9BF042A9769BF00C4D7FE /* Assets.xcassets in Resources */,
+				4DB9BF022A9769BE00C4D7FE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		14234191E2205ED3512DC3C8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MapsIndoorsSDK-iOS-Examples-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		15D4FF715C8547F47876C84F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MapsIndoorsSDK-iOS-Examples/Pods-MapsIndoorsSDK-iOS-Examples-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MapsIndoorsSDK-iOS-Examples/Pods-MapsIndoorsSDK-iOS-Examples-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MapsIndoorsSDK-iOS-Examples/Pods-MapsIndoorsSDK-iOS-Examples-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		666C3D4B8AEF9991B7ABB1D5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MapsIndoorsSDK-iOS-Examples/Pods-MapsIndoorsSDK-iOS-Examples-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MapsIndoorsSDK-iOS-Examples/Pods-MapsIndoorsSDK-iOS-Examples-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MapsIndoorsSDK-iOS-Examples/Pods-MapsIndoorsSDK-iOS-Examples-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4DB9BEF32A9769BE00C4D7FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DB9BEFF2A9769BE00C4D7FE /* ViewController.swift in Sources */,
+				4DB9BEFB2A9769BE00C4D7FE /* AppDelegate.swift in Sources */,
+				4DB9BEFD2A9769BE00C4D7FE /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4DB9BF002A9769BE00C4D7FE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4DB9BF012A9769BE00C4D7FE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4DB9BF052A9769BF00C4D7FE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4DB9BF062A9769BF00C4D7FE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4DB9BF092A9769BF00C4D7FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4DB9BF0A2A9769BF00C4D7FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4DB9BF0C2A9769BF00C4D7FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC0C3E97BFAF5A9EDEA2A24E /* Pods-MapsIndoorsSDK-iOS-Examples.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A8V6656PYZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MapsIndoorsSDK-iOS-Examples/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mapspeople.MapsIndoorsSDK-iOS-Examples";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4DB9BF0D2A9769BF00C4D7FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85CFFC50B8649D6E6055F47F /* Pods-MapsIndoorsSDK-iOS-Examples.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A8V6656PYZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MapsIndoorsSDK-iOS-Examples/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mapspeople.MapsIndoorsSDK-iOS-Examples";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4DB9BEF22A9769BE00C4D7FE /* Build configuration list for PBXProject "MapsIndoorsSDK-iOS-Examples" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DB9BF092A9769BF00C4D7FE /* Debug */,
+				4DB9BF0A2A9769BF00C4D7FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4DB9BF0B2A9769BF00C4D7FE /* Build configuration list for PBXNativeTarget "MapsIndoorsSDK-iOS-Examples" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DB9BF0C2A9769BF00C4D7FE /* Debug */,
+				4DB9BF0D2A9769BF00C4D7FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4DB9BEEF2A9769BE00C4D7FE /* Project object */;
+}

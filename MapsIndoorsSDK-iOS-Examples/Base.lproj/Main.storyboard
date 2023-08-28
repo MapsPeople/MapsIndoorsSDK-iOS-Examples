@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bb0-FN-3Ax">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -11,7 +11,7 @@
         <!--Demo Selector View Controller-->
         <scene sceneID="jq6-gW-Qt2">
             <objects>
-                <tableViewController storyboardIdentifier="demoSelector" id="0xP-gz-R0c" customClass="DemoSelectorViewController" customModule="Demos" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="demoSelector" id="0xP-gz-R0c" customClass="DemoSelectorViewController" customModule="MapsIndoorsSDK_iOS_Examples" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="GGo-ap-0Fm">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -91,7 +91,7 @@
         <!--Start Page-->
         <scene sceneID="gmg-iR-zZx">
             <objects>
-                <viewController storyboardIdentifier="startPage1" id="bCL-uS-2UQ" customClass="StartPage" customModule="Demos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="startPage1" id="bCL-uS-2UQ" customClass="StartPage" customModule="MapsIndoorsSDK_iOS_Examples" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C85-qq-T1b">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -213,7 +213,7 @@
         <!--Settings Controller-->
         <scene sceneID="olv-aY-NUu">
             <objects>
-                <viewController storyboardIdentifier="settings" id="EFL-u9-s9R" customClass="SettingsController" customModule="Demos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="settings" id="EFL-u9-s9R" customClass="SettingsController" customModule="MapsIndoorsSDK_iOS_Examples" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sen-La-Lfh">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

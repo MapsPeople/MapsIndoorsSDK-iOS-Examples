@@ -270,11 +270,11 @@ class DemoSelectorViewController: UITableViewController {
     let demos: [Demo] = [
         // Getting Started
         Demo(controllerClass: DisplayMap.self, title: "Display Map", description: "This demo simply displays map with MapsIndoors content", sectionTitle: "Getting Started"),
-        /*Demo(controllerClass: BasicDirection.self, title: "Render Route", description: "This demo renders a route between two random locations, reload if it does not", sectionTitle: "Getting Started"),
+        Demo(controllerClass: BasicDirection.self, title: "Render Route", description: "This demo renders a route between two random locations, reload if it does not", sectionTitle: "Getting Started"),
         Demo(controllerClass: SearchLocation.self, title: "Search a Location", description: "This demo lets you search and select an MPLocation", sectionTitle: "Getting Started"),
         Demo(controllerClass: BasicLiveData.self, title: "Live Data", description: "Turn on live updates", sectionTitle: "Getting Started"),
         // Basic
-        Demo(controllerClass: ShowLocationController.self, title: "Select Location", description: "This demo selects a random Location", sectionTitle: "Basic"),
+        /*Demo(controllerClass: ShowLocationController.self, title: "Select Location", description: "This demo selects a random Location", sectionTitle: "Basic"),
         Demo(controllerClass: ShowMultipleLocationsController.self, title: "Show Multiple Locations", description: "Set and apply filter to only show certain Locations.", sectionTitle: "Basic"),
         Demo(controllerClass: ShowVenueController.self, title: "Select Venue", description: "This demo selects a random Venue in your solution", sectionTitle: "Basic"),
         Demo(controllerClass: ShowBuildingController.self, title: "Select Building", description: "This demo selects a random Building", sectionTitle: "Basic"),

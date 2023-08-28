@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		19DC72AC5D095A9FF5C8C2F9 /* Pods_MapsIndoorsSDK_iOS_Examples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A80925BE74AAD8A03986BE1A /* Pods_MapsIndoorsSDK_iOS_Examples.framework */; };
+		4D1F96342A9C8EEC0034CA87 /* SearchLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F96332A9C8EEC0034CA87 /* SearchLocation.swift */; };
+		4D1F96362A9C8F090034CA87 /* BasicDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F96352A9C8F090034CA87 /* BasicDirection.swift */; };
+		4D1F96382A9C8F2E0034CA87 /* BasicLiveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F96372A9C8F2E0034CA87 /* BasicLiveData.swift */; };
 		4DB9BEFB2A9769BE00C4D7FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9BEFA2A9769BE00C4D7FE /* AppDelegate.swift */; };
 		4DB9BEFD2A9769BE00C4D7FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9BEFC2A9769BE00C4D7FE /* SceneDelegate.swift */; };
 		4DB9BF022A9769BE00C4D7FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DB9BF002A9769BE00C4D7FE /* Main.storyboard */; };
@@ -28,6 +31,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D1F96332A9C8EEC0034CA87 /* SearchLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocation.swift; sourceTree = "<group>"; };
+		4D1F96352A9C8F090034CA87 /* BasicDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicDirection.swift; sourceTree = "<group>"; };
+		4D1F96372A9C8F2E0034CA87 /* BasicLiveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicLiveData.swift; sourceTree = "<group>"; };
 		4DB9BEF72A9769BE00C4D7FE /* MapsIndoorsSDK-iOS-Examples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MapsIndoorsSDK-iOS-Examples.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DB9BEFA2A9769BE00C4D7FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DB9BEFC2A9769BE00C4D7FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +125,9 @@
 			isa = PBXGroup;
 			children = (
 				4DB9BF242A97761F00C4D7FE /* DisplayMap.swift */,
+				4D1F96332A9C8EEC0034CA87 /* SearchLocation.swift */,
+				4D1F96352A9C8F090034CA87 /* BasicDirection.swift */,
+				4D1F96372A9C8F2E0034CA87 /* BasicLiveData.swift */,
 			);
 			path = "Getting Started";
 			sourceTree = "<group>";
@@ -276,6 +285,7 @@
 			files = (
 				4DB9BF102A976E9400C4D7FE /* DemoSelectorViewController.swift in Sources */,
 				4DB9BF142A976F4D00C4D7FE /* StartPage.swift in Sources */,
+				4D1F96362A9C8F090034CA87 /* BasicDirection.swift in Sources */,
 				4DB9BF122A976F3900C4D7FE /* SettingsController.swift in Sources */,
 				4DB9BF1E2A97748700C4D7FE /* GoogleMapsWrapper.swift in Sources */,
 				4DB9BF202A9774AF00C4D7FE /* MapboxWrapper.swift in Sources */,
@@ -283,7 +293,9 @@
 				4DB9BEFB2A9769BE00C4D7FE /* AppDelegate.swift in Sources */,
 				4DB9BEFD2A9769BE00C4D7FE /* SceneDelegate.swift in Sources */,
 				4DB9BF182A9771A800C4D7FE /* GenericMap.swift in Sources */,
+				4D1F96382A9C8F2E0034CA87 /* BasicLiveData.swift in Sources */,
 				4DB9BF1A2A97736000C4D7FE /* APIKeys.swift in Sources */,
+				4D1F96342A9C8EEC0034CA87 /* SearchLocation.swift in Sources */,
 				4DB9BF162A9770BB00C4D7FE /* MapEngine.swift in Sources */,
 				4DB9BF252A97761F00C4D7FE /* DisplayMap.swift in Sources */,
 				4DB9BF272A97765100C4D7FE /* BaseMapController.swift in Sources */,

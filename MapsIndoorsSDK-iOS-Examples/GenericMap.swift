@@ -1,10 +1,3 @@
-//
-//  GenericMap.swift
-//  MapsIndoorsSDK-iOS-Examples
-//
-//  Created by M. Faizan Satti on 24/08/2023.
-//
-
 import Foundation
 import MapsIndoorsCore
 import GoogleMaps

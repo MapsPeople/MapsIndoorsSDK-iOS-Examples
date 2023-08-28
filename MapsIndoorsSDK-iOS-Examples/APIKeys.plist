@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   APIKeys.plist
+   MapsIndoorsSDK-iOS-Examples
+
+   Created by M. Faizan Satti on 24/08/2023.
+   Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
+-->
+<plist version="1.0">
+<dict>
+    <key>GoogleMapsAPIKey</key>
+    <string>AIzaSyCxPSR9JpeRCzcWs-gq19kaYPNVy_DphOA</string>
+    <key>MapboxAPIKey</key>
+    <string>pk.eyJ1IjoibWFibSIsImEiOiJjbDRpNTh4MWIwM21iM2NwcHdlY3JlNWpjIn0.cwQw5oEBEFTZyczyJw3rFg</string>
+</dict>
+</plist>

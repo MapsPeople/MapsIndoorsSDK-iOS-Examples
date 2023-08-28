@@ -255,7 +255,7 @@ class DemoSelectorViewController: UITableViewController {
         }
     }
     
-    let demoControllerClasses:[UIViewController.Type] = [
+    /*let demoControllerClasses:[UIViewController.Type] = [
                                                           //AdvancedDirectionsController.self, //WIP
                                                           MapStyleController.self,
                                                           MultipleDatasetsController.self,
@@ -265,12 +265,12 @@ class DemoSelectorViewController: UITableViewController {
                                                           AppUserRolesController.self,
                                                           LiveDataController.self,
                                                           BookableLocationsController.self,
-    ]
+    ]*/
     
     let demos: [Demo] = [
         // Getting Started
         Demo(controllerClass: DisplayMap.self, title: "Display Map", description: "This demo simply displays map with MapsIndoors content", sectionTitle: "Getting Started"),
-        Demo(controllerClass: BasicDirection.self, title: "Render Route", description: "This demo renders a route between two random locations, reload if it does not", sectionTitle: "Getting Started"),
+        /*Demo(controllerClass: BasicDirection.self, title: "Render Route", description: "This demo renders a route between two random locations, reload if it does not", sectionTitle: "Getting Started"),
         Demo(controllerClass: SearchLocation.self, title: "Search a Location", description: "This demo lets you search and select an MPLocation", sectionTitle: "Getting Started"),
         Demo(controllerClass: BasicLiveData.self, title: "Live Data", description: "Turn on live updates", sectionTitle: "Getting Started"),
         // Basic
@@ -297,7 +297,7 @@ class DemoSelectorViewController: UITableViewController {
         Demo(controllerClass: ChangeDisplaySettingController.self, title: "Change Display Rule", description: "Set and change Locations Display Rule at runtime", sectionTitle: "Advanced: Display Rule"),
         Demo(controllerClass: CustomFloorSelectorController.self, title: "Custom Floor Selector", description: "Provide your own custom floor selector, reload controller if no custom floor selector is visible", sectionTitle: "Advanced"),
         Demo(controllerClass: BookableLocationsController.self, title: "Location Booking", description: "View and book MPLocation", sectionTitle: "Advanced"),
-        Demo(controllerClass: DatasetMapController.self, title: "Dataset/Cache", description: "Demo on MapsIndoors cache", sectionTitle: "Advanced"),
+        Demo(controllerClass: DatasetMapController.self, title: "Dataset/Cache", description: "Demo on MapsIndoors cache", sectionTitle: "Advanced"),*/
         //Demo(controllerClass: PerVenueController.self, title: "Mega Solutions", description: "Per venue loading", sectionTitle: "Advanced"),
         //Demo(controllerClass: ChnageLanguage.self, title: "Change Language", description: "Chnage MP language and app language via localizable string, sectionTitle: "Intermediate"),
     ]

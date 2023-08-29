@@ -1,17 +1,10 @@
-//
-//  DemoSelectorViewController.swift
-//  MapsIndoorsSDK-iOS-Examples
-//
-//  Created by M. Faizan Satti on 24/08/2023.
-//
-
 import UIKit
-import GoogleMaps
-import MapboxMaps
 import MapsIndoorsCore
 import MapsIndoors
 import MapsIndoorsGoogleMaps
 import MapsIndoorsMapbox
+import GoogleMaps
+import MapboxMaps
 
 class DemoSelectorViewController: UITableViewController {
     
@@ -255,18 +248,6 @@ class DemoSelectorViewController: UITableViewController {
         }
     }
     
-    /*let demoControllerClasses:[UIViewController.Type] = [
-                                                          //AdvancedDirectionsController.self, //WIP
-                                                          MapStyleController.self,
-                                                          MultipleDatasetsController.self,
-                                                          SearchMapController.self,
-                                                          OfflineController.self,
-                                                          LocationSourcesController.self,
-                                                          AppUserRolesController.self,
-                                                          LiveDataController.self,
-                                                          BookableLocationsController.self,
-    ]*/
-    
     let demos: [Demo] = [
         // Getting Started
         Demo(controllerClass: DisplayMap.self, title: "Display Map", description: "This demo simply displays map with MapsIndoors content", sectionTitle: "Getting Started"),
@@ -285,21 +266,16 @@ class DemoSelectorViewController: UITableViewController {
         Demo(controllerClass: ShowMyLocationController.self, title: "Show My Location", description: "Mock a position provider and show user location (blue dot) and set it's Display Rule to change it's default icon", sectionTitle: "Intermediate"),
         Demo(controllerClass: UseDelegatesController.self, title: "Custom Map Control Delegate", description: "Implement your own custom Map Control Delegate", sectionTitle: "Intermediate"),
         Demo(controllerClass: CustomInfoWindowController.self, title: "Custom Info Window", description: "Implement your own custom Info Window", sectionTitle: "Intermediate"),
-        //Demo(controllerClass: MapStyleController.self, title: "Map Style", description: "Switch Map style at runtime", sectionTitle: "Intermediate"),
-        //Demo(controllerClass: MultipleDatasetsController.self, title: "Multiple Datasets", description: "Switch and load Multiple Datasets", sectionTitle: "Intermediate"),
         // Advanced: Directions
-        /*Demo(controllerClass: ShowDirection.self, title: "Search Directions", description: "Search locations and render route between them. Also set stair preference. Note: only avoid stairs work for now...", sectionTitle: "Advanced: Directions"),
+        Demo(controllerClass: ShowDirection.self, title: "Search Directions", description: "Search locations and render route between them. Also set stair preference. Note: only avoid stairs work for now...", sectionTitle: "Advanced: Directions"),
         Demo(controllerClass: DirectionsWithPadding.self, title: "Direction with padding", description: "Set padding for rendered route and select orientation", sectionTitle: "Advanced: Directions"),
-        // Advanced
-        Demo(controllerClass: ClusteringController.self, title: "Clustering/Collisions", description: "Enable/Disable Clustering at runtime and provide a custom icon", sectionTitle: "Advanced"),
-        Demo(controllerClass: LiveData.self, title: "Live data and delegate", description: "Enable live data and implement delegate", sectionTitle: "Advanced"),
+        // Advanced: Display Rule
         Demo(controllerClass: ToggleLocationsVisibilityController.self, title: "Toggle Locations Visibility", description: "Set visibility via Display Rule. Change in code to not randomly select location. If everything disappears, reload.", sectionTitle: "Advanced: Display Rule"),
         Demo(controllerClass: ChangeDisplaySettingController.self, title: "Change Display Rule", description: "Set and change Locations Display Rule at runtime", sectionTitle: "Advanced: Display Rule"),
+        // Advanced
+        Demo(controllerClass: ClusteringController.self, title: "Clustering/Collisions", description: "Enable/Disable Clustering at runtime and provide a custom icon", sectionTitle: "Advanced"),
         Demo(controllerClass: CustomFloorSelectorController.self, title: "Custom Floor Selector", description: "Provide your own custom floor selector, reload controller if no custom floor selector is visible", sectionTitle: "Advanced"),
-        Demo(controllerClass: BookableLocationsController.self, title: "Location Booking", description: "View and book MPLocation", sectionTitle: "Advanced"),
-        Demo(controllerClass: DatasetMapController.self, title: "Dataset/Cache", description: "Demo on MapsIndoors cache", sectionTitle: "Advanced"),*/
-        //Demo(controllerClass: PerVenueController.self, title: "Mega Solutions", description: "Per venue loading", sectionTitle: "Advanced"),
-        //Demo(controllerClass: ChnageLanguage.self, title: "Change Language", description: "Chnage MP language and app language via localizable string, sectionTitle: "Intermediate"),
+        Demo(controllerClass: DatasetMapController.self, title: "Dataset/Cache", description: "Demo on MapsIndoors cache", sectionTitle: "Advanced"),
     ]
 }
 

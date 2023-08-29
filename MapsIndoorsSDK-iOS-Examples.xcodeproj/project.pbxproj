@@ -22,6 +22,14 @@
 		4D1F964F2A9DDF920034CA87 /* LocationDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F964E2A9DDF920034CA87 /* LocationDetailsController.swift */; };
 		4D1F96512A9DE58C0034CA87 /* UseDelegatesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F96502A9DE58C0034CA87 /* UseDelegatesController.swift */; };
 		4D1F96532A9DE9EF0034CA87 /* CustomInfoWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F96522A9DE9EF0034CA87 /* CustomInfoWindowController.swift */; };
+		4D1F96562A9DEB050034CA87 /* ShowDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F96552A9DEB050034CA87 /* ShowDirection.swift */; };
+		4D1F96582A9DEB260034CA87 /* DirectionsWithPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F96572A9DEB260034CA87 /* DirectionsWithPadding.swift */; };
+		4D1F965B2A9DEF460034CA87 /* ToggleLocationsVisibilityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F965A2A9DEF460034CA87 /* ToggleLocationsVisibilityController.swift */; };
+		4D1F965D2A9DF0F30034CA87 /* ChangeDisplaySettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F965C2A9DF0F30034CA87 /* ChangeDisplaySettingController.swift */; };
+		4D1F965F2A9DF26F0034CA87 /* ClusteringController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F965E2A9DF26F0034CA87 /* ClusteringController.swift */; };
+		4D1F96632A9DF44B0034CA87 /* CustomFloorSelectorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F96622A9DF44B0034CA87 /* CustomFloorSelectorController.swift */; };
+		4D1F96662A9DF5140034CA87 /* DatasetMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F96652A9DF5140034CA87 /* DatasetMapController.swift */; };
+		4D1F96682A9DF5570034CA87 /* DatasetListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F96672A9DF5570034CA87 /* DatasetListController.swift */; };
 		4DB9BEFB2A9769BE00C4D7FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9BEFA2A9769BE00C4D7FE /* AppDelegate.swift */; };
 		4DB9BEFD2A9769BE00C4D7FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9BEFC2A9769BE00C4D7FE /* SceneDelegate.swift */; };
 		4DB9BF022A9769BE00C4D7FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DB9BF002A9769BE00C4D7FE /* Main.storyboard */; };
@@ -56,6 +64,14 @@
 		4D1F964E2A9DDF920034CA87 /* LocationDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailsController.swift; sourceTree = "<group>"; };
 		4D1F96502A9DE58C0034CA87 /* UseDelegatesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseDelegatesController.swift; sourceTree = "<group>"; };
 		4D1F96522A9DE9EF0034CA87 /* CustomInfoWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInfoWindowController.swift; sourceTree = "<group>"; };
+		4D1F96552A9DEB050034CA87 /* ShowDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDirection.swift; sourceTree = "<group>"; };
+		4D1F96572A9DEB260034CA87 /* DirectionsWithPadding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsWithPadding.swift; sourceTree = "<group>"; };
+		4D1F965A2A9DEF460034CA87 /* ToggleLocationsVisibilityController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleLocationsVisibilityController.swift; sourceTree = "<group>"; };
+		4D1F965C2A9DF0F30034CA87 /* ChangeDisplaySettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeDisplaySettingController.swift; sourceTree = "<group>"; };
+		4D1F965E2A9DF26F0034CA87 /* ClusteringController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusteringController.swift; sourceTree = "<group>"; };
+		4D1F96622A9DF44B0034CA87 /* CustomFloorSelectorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFloorSelectorController.swift; sourceTree = "<group>"; };
+		4D1F96652A9DF5140034CA87 /* DatasetMapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatasetMapController.swift; sourceTree = "<group>"; };
+		4D1F96672A9DF5570034CA87 /* DatasetListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatasetListController.swift; sourceTree = "<group>"; };
 		4DB9BEF72A9769BE00C4D7FE /* MapsIndoorsSDK-iOS-Examples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MapsIndoorsSDK-iOS-Examples.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DB9BEFA2A9769BE00C4D7FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DB9BEFC2A9769BE00C4D7FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +146,11 @@
 		4D1F963C2A9C96FE0034CA87 /* Advanced */ = {
 			isa = PBXGroup;
 			children = (
+				4D1F96542A9DEAF00034CA87 /* Directions */,
+				4D1F96592A9DEF120034CA87 /* Display Rule */,
+				4D1F965E2A9DF26F0034CA87 /* ClusteringController.swift */,
+				4D1F96622A9DF44B0034CA87 /* CustomFloorSelectorController.swift */,
+				4D1F96642A9DF4B80034CA87 /* Dataset Manager */,
 			);
 			path = Advanced;
 			sourceTree = "<group>";
@@ -141,6 +162,33 @@
 				4D1F964A2A9DDA860034CA87 /* ShowMyLocationController.swift */,
 			);
 			path = "Show My Location";
+			sourceTree = "<group>";
+		};
+		4D1F96542A9DEAF00034CA87 /* Directions */ = {
+			isa = PBXGroup;
+			children = (
+				4D1F96552A9DEB050034CA87 /* ShowDirection.swift */,
+				4D1F96572A9DEB260034CA87 /* DirectionsWithPadding.swift */,
+			);
+			path = Directions;
+			sourceTree = "<group>";
+		};
+		4D1F96592A9DEF120034CA87 /* Display Rule */ = {
+			isa = PBXGroup;
+			children = (
+				4D1F965A2A9DEF460034CA87 /* ToggleLocationsVisibilityController.swift */,
+				4D1F965C2A9DF0F30034CA87 /* ChangeDisplaySettingController.swift */,
+			);
+			path = "Display Rule";
+			sourceTree = "<group>";
+		};
+		4D1F96642A9DF4B80034CA87 /* Dataset Manager */ = {
+			isa = PBXGroup;
+			children = (
+				4D1F96652A9DF5140034CA87 /* DatasetMapController.swift */,
+				4D1F96672A9DF5570034CA87 /* DatasetListController.swift */,
+			);
+			path = "Dataset Manager";
 			sourceTree = "<group>";
 		};
 		4DB9BEEE2A9769BE00C4D7FE = {
@@ -166,7 +214,6 @@
 			children = (
 				4DB9BF0E2A976E5B00C4D7FE /* Demo UI */,
 				4D1F96392A9C95C90034CA87 /* Map Wrapper */,
-				4DB9BF232A9775F700C4D7FE /* Getting Started */,
 				4DB9BEFA2A9769BE00C4D7FE /* AppDelegate.swift */,
 				4DB9BEFC2A9769BE00C4D7FE /* SceneDelegate.swift */,
 				4DB9BF002A9769BE00C4D7FE /* Main.storyboard */,
@@ -177,6 +224,7 @@
 				4DB9BF1B2A97739600C4D7FE /* APIKeys.plist */,
 				4DB9BF212A97758400C4D7FE /* Memory.swift */,
 				4DB9BF262A97765100C4D7FE /* BaseMapController.swift */,
+				4DB9BF232A9775F700C4D7FE /* Getting Started */,
 				4D1F963A2A9C96DA0034CA87 /* Basic */,
 				4D1F963B2A9C96F10034CA87 /* Intermediate */,
 				4D1F963C2A9C96FE0034CA87 /* Advanced */,
@@ -370,14 +418,22 @@
 				4DB9BEFB2A9769BE00C4D7FE /* AppDelegate.swift in Sources */,
 				4D1F96492A9DDA5A0034CA87 /* MyPositionProvider.swift in Sources */,
 				4DB9BEFD2A9769BE00C4D7FE /* SceneDelegate.swift in Sources */,
+				4D1F965B2A9DEF460034CA87 /* ToggleLocationsVisibilityController.swift in Sources */,
 				4DB9BF182A9771A800C4D7FE /* GenericMap.swift in Sources */,
+				4D1F96632A9DF44B0034CA87 /* CustomFloorSelectorController.swift in Sources */,
 				4D1F96382A9C8F2E0034CA87 /* BasicLiveData.swift in Sources */,
 				4DB9BF1A2A97736000C4D7FE /* APIKeys.swift in Sources */,
 				4D1F96342A9C8EEC0034CA87 /* SearchLocation.swift in Sources */,
+				4D1F965D2A9DF0F30034CA87 /* ChangeDisplaySettingController.swift in Sources */,
 				4DB9BF162A9770BB00C4D7FE /* MapEngine.swift in Sources */,
+				4D1F96682A9DF5570034CA87 /* DatasetListController.swift in Sources */,
 				4D1F96512A9DE58C0034CA87 /* UseDelegatesController.swift in Sources */,
+				4D1F96562A9DEB050034CA87 /* ShowDirection.swift in Sources */,
 				4DB9BF252A97761F00C4D7FE /* DisplayMap.swift in Sources */,
 				4D1F964F2A9DDF920034CA87 /* LocationDetailsController.swift in Sources */,
+				4D1F965F2A9DF26F0034CA87 /* ClusteringController.swift in Sources */,
+				4D1F96662A9DF5140034CA87 /* DatasetMapController.swift in Sources */,
+				4D1F96582A9DEB260034CA87 /* DirectionsWithPadding.swift in Sources */,
 				4DB9BF272A97765100C4D7FE /* BaseMapController.swift in Sources */,
 				4D1F963E2A9C97860034CA87 /* ShowLocationController.swift in Sources */,
 				4D1F96422A9C98010034CA87 /* ShowVenueController.swift in Sources */,

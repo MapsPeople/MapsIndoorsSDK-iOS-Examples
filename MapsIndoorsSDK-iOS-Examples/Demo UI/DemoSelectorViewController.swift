@@ -283,12 +283,12 @@ class DemoSelectorViewController: UITableViewController {
         Demo(controllerClass: LocationDetailsController.self, title: "Location Details", description: "This demo shows the details of a location", sectionTitle: "Basic"),
         // Intermediate
         Demo(controllerClass: ShowMyLocationController.self, title: "Show My Location", description: "Mock a position provider and show user location (blue dot) and set it's Display Rule to change it's default icon", sectionTitle: "Intermediate"),
-        /*Demo(controllerClass: UseDelegatesController.self, title: "Custom Map Control Delegate", description: "Implement your own custom Map Control Delegate", sectionTitle: "Intermediate"),
+        Demo(controllerClass: UseDelegatesController.self, title: "Custom Map Control Delegate", description: "Implement your own custom Map Control Delegate", sectionTitle: "Intermediate"),
         Demo(controllerClass: CustomInfoWindowController.self, title: "Custom Info Window", description: "Implement your own custom Info Window", sectionTitle: "Intermediate"),
-        Demo(controllerClass: MapStyleController.self, title: "Map Style", description: "Switch Map style at runtime", sectionTitle: "Intermediate"),
-        Demo(controllerClass: MultipleDatasetsController.self, title: "Multiple Datasets", description: "Switch and load Multiple Datasets", sectionTitle: "Intermediate"),
+        //Demo(controllerClass: MapStyleController.self, title: "Map Style", description: "Switch Map style at runtime", sectionTitle: "Intermediate"),
+        //Demo(controllerClass: MultipleDatasetsController.self, title: "Multiple Datasets", description: "Switch and load Multiple Datasets", sectionTitle: "Intermediate"),
         // Advanced: Directions
-        Demo(controllerClass: ShowDirection.self, title: "Search Directions", description: "Search locations and render route between them. Also set stair preference. Note: only avoid stairs work for now...", sectionTitle: "Advanced: Directions"),
+        /*Demo(controllerClass: ShowDirection.self, title: "Search Directions", description: "Search locations and render route between them. Also set stair preference. Note: only avoid stairs work for now...", sectionTitle: "Advanced: Directions"),
         Demo(controllerClass: DirectionsWithPadding.self, title: "Direction with padding", description: "Set padding for rendered route and select orientation", sectionTitle: "Advanced: Directions"),
         // Advanced
         Demo(controllerClass: ClusteringController.self, title: "Clustering/Collisions", description: "Enable/Disable Clustering at runtime and provide a custom icon", sectionTitle: "Advanced"),

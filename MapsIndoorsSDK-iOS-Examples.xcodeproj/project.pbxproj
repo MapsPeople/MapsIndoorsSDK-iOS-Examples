@@ -20,6 +20,8 @@
 		4D1F964B2A9DDA860034CA87 /* ShowMyLocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F964A2A9DDA860034CA87 /* ShowMyLocationController.swift */; };
 		4D1F964D2A9DDF720034CA87 /* MapPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F964C2A9DDF720034CA87 /* MapPadding.swift */; };
 		4D1F964F2A9DDF920034CA87 /* LocationDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F964E2A9DDF920034CA87 /* LocationDetailsController.swift */; };
+		4D1F96512A9DE58C0034CA87 /* UseDelegatesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F96502A9DE58C0034CA87 /* UseDelegatesController.swift */; };
+		4D1F96532A9DE9EF0034CA87 /* CustomInfoWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F96522A9DE9EF0034CA87 /* CustomInfoWindowController.swift */; };
 		4DB9BEFB2A9769BE00C4D7FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9BEFA2A9769BE00C4D7FE /* AppDelegate.swift */; };
 		4DB9BEFD2A9769BE00C4D7FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9BEFC2A9769BE00C4D7FE /* SceneDelegate.swift */; };
 		4DB9BF022A9769BE00C4D7FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DB9BF002A9769BE00C4D7FE /* Main.storyboard */; };
@@ -52,6 +54,8 @@
 		4D1F964A2A9DDA860034CA87 /* ShowMyLocationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMyLocationController.swift; sourceTree = "<group>"; };
 		4D1F964C2A9DDF720034CA87 /* MapPadding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPadding.swift; sourceTree = "<group>"; };
 		4D1F964E2A9DDF920034CA87 /* LocationDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailsController.swift; sourceTree = "<group>"; };
+		4D1F96502A9DE58C0034CA87 /* UseDelegatesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseDelegatesController.swift; sourceTree = "<group>"; };
+		4D1F96522A9DE9EF0034CA87 /* CustomInfoWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInfoWindowController.swift; sourceTree = "<group>"; };
 		4DB9BEF72A9769BE00C4D7FE /* MapsIndoorsSDK-iOS-Examples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MapsIndoorsSDK-iOS-Examples.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DB9BEFA2A9769BE00C4D7FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DB9BEFC2A9769BE00C4D7FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +121,8 @@
 			isa = PBXGroup;
 			children = (
 				4D1F96472A9DDA3A0034CA87 /* Show My Location */,
+				4D1F96502A9DE58C0034CA87 /* UseDelegatesController.swift */,
+				4D1F96522A9DE9EF0034CA87 /* CustomInfoWindowController.swift */,
 			);
 			path = Intermediate;
 			sourceTree = "<group>";
@@ -355,6 +361,7 @@
 				4DB9BF142A976F4D00C4D7FE /* StartPage.swift in Sources */,
 				4D1F96462A9C98F70034CA87 /* ShowFloorController.swift in Sources */,
 				4D1F96362A9C8F090034CA87 /* BasicDirection.swift in Sources */,
+				4D1F96532A9DE9EF0034CA87 /* CustomInfoWindowController.swift in Sources */,
 				4DB9BF122A976F3900C4D7FE /* SettingsController.swift in Sources */,
 				4D1F964B2A9DDA860034CA87 /* ShowMyLocationController.swift in Sources */,
 				4DB9BF1E2A97748700C4D7FE /* GoogleMapsWrapper.swift in Sources */,
@@ -368,6 +375,7 @@
 				4DB9BF1A2A97736000C4D7FE /* APIKeys.swift in Sources */,
 				4D1F96342A9C8EEC0034CA87 /* SearchLocation.swift in Sources */,
 				4DB9BF162A9770BB00C4D7FE /* MapEngine.swift in Sources */,
+				4D1F96512A9DE58C0034CA87 /* UseDelegatesController.swift in Sources */,
 				4DB9BF252A97761F00C4D7FE /* DisplayMap.swift in Sources */,
 				4D1F964F2A9DDF920034CA87 /* LocationDetailsController.swift in Sources */,
 				4DB9BF272A97765100C4D7FE /* BaseMapController.swift in Sources */,

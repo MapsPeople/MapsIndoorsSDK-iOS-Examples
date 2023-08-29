@@ -274,7 +274,7 @@ class DemoSelectorViewController: UITableViewController {
         Demo(controllerClass: SearchLocation.self, title: "Search a Location", description: "This demo lets you search and select an MPLocation", sectionTitle: "Getting Started"),
         Demo(controllerClass: BasicLiveData.self, title: "Live Data", description: "Turn on live updates", sectionTitle: "Getting Started"),
         // Basic
-        /*Demo(controllerClass: ShowLocationController.self, title: "Select Location", description: "This demo selects a random Location", sectionTitle: "Basic"),
+        Demo(controllerClass: ShowLocationController.self, title: "Select Location", description: "This demo selects a random Location", sectionTitle: "Basic"),
         Demo(controllerClass: ShowMultipleLocationsController.self, title: "Show Multiple Locations", description: "Set and apply filter to only show certain Locations.", sectionTitle: "Basic"),
         Demo(controllerClass: ShowVenueController.self, title: "Select Venue", description: "This demo selects a random Venue in your solution", sectionTitle: "Basic"),
         Demo(controllerClass: ShowBuildingController.self, title: "Select Building", description: "This demo selects a random Building", sectionTitle: "Basic"),
@@ -282,7 +282,7 @@ class DemoSelectorViewController: UITableViewController {
         Demo(controllerClass: MapPadding.self, title: "Map Padding", description: "Adjust Map Padding", sectionTitle: "Basic"),
         Demo(controllerClass: LocationDetailsController.self, title: "Location Details", description: "This demo shows the details of a location", sectionTitle: "Basic"),
         // Intermediate
-        Demo(controllerClass: ShowMyLocationController.self, title: "Show My Location", description: "Mock a position provider and show user location (blue dot) and set it's Display Rule to change it's default icon", sectionTitle: "Intermediate"),
+        /*Demo(controllerClass: ShowMyLocationController.self, title: "Show My Location", description: "Mock a position provider and show user location (blue dot) and set it's Display Rule to change it's default icon", sectionTitle: "Intermediate"),
         Demo(controllerClass: UseDelegatesController.self, title: "Custom Map Control Delegate", description: "Implement your own custom Map Control Delegate", sectionTitle: "Intermediate"),
         Demo(controllerClass: CustomInfoWindowController.self, title: "Custom Info Window", description: "Implement your own custom Info Window", sectionTitle: "Intermediate"),
         Demo(controllerClass: MapStyleController.self, title: "Map Style", description: "Switch Map style at runtime", sectionTitle: "Intermediate"),

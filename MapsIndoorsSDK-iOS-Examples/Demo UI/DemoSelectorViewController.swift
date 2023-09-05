@@ -15,13 +15,15 @@ class DemoSelectorViewController: UITableViewController {
     @IBOutlet weak var mapProviderSegmentedControl: UISegmentedControl!
     static var isGoogleMapsInitialized = false
     
+    var memoryAndZoomUI: MemoryAndZoomUI!
+    
     var searchController: UISearchController!
     var filteredDemos: [Demo] = []
     
     var sectionTitles: [String] = []
     
     var dataSource: DemoTableViewDataSource!
-    var delegate: DemoTableViewDelegate!
+    var demoTableViewDelegate: DemoTableViewDelegate!
     
     var hasAlreadyAppeared = false // hack to not force clear selected map view on first launch
     
@@ -53,10 +55,22 @@ class DemoSelectorViewController: UITableViewController {
         filteredDemos = demos
         
         dataSource = DemoTableViewDataSource(demos: demos, sectionTitles: sectionTitles, filteredDemos: filteredDemos)
-        delegate = DemoTableViewDelegate(demos: demos, sectionTitles: sectionTitles, filteredDemos: filteredDemos, navigationController: navigationController)
+        demoTableViewDelegate = DemoTableViewDelegate(demos: demos, sectionTitles: sectionTitles, filteredDemos: filteredDemos, navigationController: navigationController)
+        demoTableViewDelegate.delegate = self
         
         tableView.dataSource = dataSource
-        tableView.delegate = delegate
+        tableView.delegate = demoTableViewDelegate
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let error = UserDefaults.standard.string(forKey: "MapsIndoorsError") {
+            let alert = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+            UserDefaults.standard.removeObject(forKey: "MapsIndoorsError")
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -124,71 +138,103 @@ class DemoSelectorViewController: UITableViewController {
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search Demos"
+        searchController.searchBar.delegate = self
         definesPresentationContext = true
         tableView.tableHeaderView = searchController.searchBar
     }
     
     func setupMemoryAndZoomUI() {
+        memoryAndZoomUI = MemoryAndZoomUI.shared
+        memoryAndZoomUI.delegate = self
         let window = UIApplication.shared.keyWindow
-        window?.addSubview(MemoryAndZoom())
+        if memoryAndZoomUI.superview == nil {
+            window?.addSubview(memoryAndZoomUI)
+        } else {
+            window?.bringSubviewToFront(memoryAndZoomUI)
+        }
         reportMemoryUsage()
         reportZoom()
     }
     
     @objc func reportMemoryUsage() -> Void {
-        firstLabel.text = Memory.formattedMemoryFootprint()
+        memoryAndZoomUI.firstLabel.text = Memory.formattedMemoryFootprint()
         self.perform(#selector(reportMemoryUsage), with: nil, afterDelay: 1)
     }
     
     @objc func reportZoom() {
-        secondLabel.text = String(format: "%.2f", MapEngine.selectedMapProvider?.zoom ?? 99)
+        memoryAndZoomUI.secondLabel.text = String(format: "%.2f", MapEngine.selectedMapProvider?.zoom ?? 99)
         self.perform(#selector(reportZoom), with: nil, afterDelay: 0.01)
     }
     
-    let memoryLabel = UILabel()
-    let firstImageView = UIImageView()
-    let firstLabel = UILabel()
-    let secondImageView = UIImageView()
-    let secondLabel = UILabel()
-    let settingsButton = UIButton(type: .custom)
+    let demos: [Demo] = [
+        // Getting Started
+        Demo(controllerClass: DisplayMap.self, title: "Display Map", description: "This demo simply displays map with MapsIndoors content", sectionTitle: "Getting Started"),
+        Demo(controllerClass: BasicDirection.self, title: "Render Route", description: "This demo renders a route between two random locations, reload if it does not", sectionTitle: "Getting Started"),
+        Demo(controllerClass: SearchLocation.self, title: "Search a Location", description: "This demo lets you search and select an MPLocation", sectionTitle: "Getting Started"),
+        Demo(controllerClass: BasicLiveData.self, title: "Live Data", description: "Turn on live updates", sectionTitle: "Getting Started"),
+        // Basic
+        Demo(controllerClass: SelectionController.self, title: "Select/Show Content", description: "This demonstrates how to use API to select location, building, floor and venue", sectionTitle: "Basic"),
+        Demo(controllerClass: ShowMultipleLocationsController.self, title: "Show Multiple Locations", description: "Set and apply filter to only show certain Locations.", sectionTitle: "Basic"),
+        Demo(controllerClass: MapPadding.self, title: "Map Padding", description: "Adjust Map Padding", sectionTitle: "Basic"),
+        Demo(controllerClass: LocationDetailsController.self, title: "Location Details", description: "This demo shows the details of a location", sectionTitle: "Basic"),
+        // Intermediate
+        Demo(controllerClass: ShowMyLocationController.self, title: "Show My Location", description: "Mock a position provider and show user location (blue dot) and set it's Display Rule to change it's default icon", sectionTitle: "Intermediate"),
+        Demo(controllerClass: UseDelegatesController.self, title: "Custom Map Control Delegate", description: "Implement your own custom Map Control Delegate", sectionTitle: "Intermediate"),
+        Demo(controllerClass: CustomInfoWindowController.self, title: "Custom Info Window", description: "Implement your own custom Info Window", sectionTitle: "Intermediate"),
+        // Advanced: Directions
+        Demo(controllerClass: ShowDirection.self, title: "Search Directions", description: "Search locations and render route between them. Also set stair preference. Note: only avoid stairs work for now...", sectionTitle: "Advanced: Directions"),
+        Demo(controllerClass: DirectionsWithPadding.self, title: "Direction with padding", description: "Set padding for rendered route and select orientation", sectionTitle: "Advanced: Directions"),
+        // Advanced: Display Rule
+        Demo(controllerClass: ToggleLocationsVisibilityController.self, title: "Toggle Locations Visibility", description: "Set visibility via Display Rule. Change in code to not randomly select location. If everything disappears, reload.", sectionTitle: "Advanced: Display Rule"),
+        Demo(controllerClass: ChangeDisplaySettingController.self, title: "Change Display Rule", description: "Set and change Locations Display Rule at runtime", sectionTitle: "Advanced: Display Rule"),
+        // Advanced
+        Demo(controllerClass: ClusteringController.self, title: "Clustering and Collisions", description: "Enable/Disable Clustering and Collisions at runtime and provide a custom icon for cluster", sectionTitle: "Advanced"),
+        Demo(controllerClass: CustomFloorSelectorController.self, title: "Custom Floor Selector", description: "Provide your own custom floor selector, reload controller if no custom floor selector is visible", sectionTitle: "Advanced"),
+        Demo(controllerClass: DatasetMapController.self, title: "Dataset/Cache", description: "Demo on MapsIndoors cache", sectionTitle: "Advanced"),
+    ]
+}
+
+private extension DemoSelectorViewController {
     
-    func MemoryAndZoom() -> UIView {
-        let window = UIView(frame: CGRect(x: 230, y: 65, width: 150, height: 20))
-        
-        secondImageView.translatesAutoresizingMaskIntoConstraints = false
-        secondImageView.contentMode = .scaleAspectFit
-        secondImageView.accessibilityIdentifier = "plusGlass"
-        secondImageView.image = UIImage(systemName: "plus.magnifyingglass")
-        window.addSubview(secondImageView)
-        
-        secondLabel.translatesAutoresizingMaskIntoConstraints = false
-        secondLabel.accessibilityIdentifier = "Zoom"
-        secondLabel.font = UIFont.boldSystemFont(ofSize: 14)
-        window.addSubview(secondLabel)
-        
-        settingsButton.setImage(UIImage(systemName: "gearshape"), for: .normal)
-        settingsButton.translatesAutoresizingMaskIntoConstraints = false
-        settingsButton.accessibilityIdentifier = "gear"
-        settingsButton.addTarget(self, action: #selector(openSettings), for: .touchUpInside)
-        window.addSubview(settingsButton)
-        
-        NSLayoutConstraint.activate([
-            settingsButton.leadingAnchor.constraint(equalTo: window.leadingAnchor),
-            settingsButton.centerYAnchor.constraint(equalTo: window.centerYAnchor),
-            settingsButton.heightAnchor.constraint(equalTo: window.heightAnchor),
-            settingsButton.widthAnchor.constraint(equalTo: settingsButton.heightAnchor),
-            
-            secondImageView.leadingAnchor.constraint(equalTo: settingsButton.trailingAnchor, constant: 3),
-            secondImageView.centerYAnchor.constraint(equalTo: window.centerYAnchor),
-            secondImageView.heightAnchor.constraint(equalTo: window.heightAnchor),
-            secondImageView.widthAnchor.constraint(equalTo: secondImageView.heightAnchor),
-            
-            secondLabel.leadingAnchor.constraint(equalTo: secondImageView.trailingAnchor, constant: 3),
-            secondLabel.trailingAnchor.constraint(equalTo: window.trailingAnchor),
-            secondLabel.centerYAnchor.constraint(equalTo: window.centerYAnchor)
-        ])
-        
-        return window
+    func displayNameFor(demo: Demo) -> String {
+        return demo.title
+    }
+}
+
+extension DemoSelectorViewController: UISearchResultsUpdating {
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        if let searchText = searchController.searchBar.text, !searchText.isEmpty {
+            filteredDemos = demos.filter { demo in
+                return demo.title.lowercased().contains(searchText.lowercased())
+            }
+        } else {
+            filteredDemos = demos
+        }
+        // Update sectionTitles based on filteredDemos
+        sectionTitles = Array(Set(filteredDemos.map { $0.sectionTitle })).sorted {
+            switch ($0, $1) {
+            case ("Getting Started", _): return true
+            case (_, "Getting Started"): return false
+            case ("Basic", _): return true
+            case (_, "Basic"): return false
+            case ("Intermediate", _): return true
+            case (_, "Intermediate"): return false
+            case ("Advanced", _): return true
+            case (_, "Advanced"): return false
+            default: return $0 < $1
+            }
+        }
+        // Update filteredDemos in dataSource and delegate
+        dataSource.filteredDemos = filteredDemos
+        demoTableViewDelegate.filteredDemos = filteredDemos
+        tableView.reloadData()
+    }
+}
+
+extension DemoSelectorViewController: MemoryAndZoomUIDelegate {
+    func didTapSettingsButton() {
+        openSettings()
     }
     
     @objc func openSettings() {
@@ -247,73 +293,25 @@ class DemoSelectorViewController: UITableViewController {
             break
         }
     }
-    
-    let demos: [Demo] = [
-        // Getting Started
-        Demo(controllerClass: DisplayMap.self, title: "Display Map", description: "This demo simply displays map with MapsIndoors content", sectionTitle: "Getting Started"),
-        Demo(controllerClass: BasicDirection.self, title: "Render Route", description: "This demo renders a route between two random locations, reload if it does not", sectionTitle: "Getting Started"),
-        Demo(controllerClass: SearchLocation.self, title: "Search a Location", description: "This demo lets you search and select an MPLocation", sectionTitle: "Getting Started"),
-        Demo(controllerClass: BasicLiveData.self, title: "Live Data", description: "Turn on live updates", sectionTitle: "Getting Started"),
-        // Basic
-        Demo(controllerClass: ShowLocationController.self, title: "Select Location", description: "This demo selects a random Location", sectionTitle: "Basic"),
-        Demo(controllerClass: ShowMultipleLocationsController.self, title: "Show Multiple Locations", description: "Set and apply filter to only show certain Locations.", sectionTitle: "Basic"),
-        Demo(controllerClass: ShowVenueController.self, title: "Select Venue", description: "This demo selects a random Venue in your solution", sectionTitle: "Basic"),
-        Demo(controllerClass: ShowBuildingController.self, title: "Select Building", description: "This demo selects a random Building", sectionTitle: "Basic"),
-        Demo(controllerClass: ShowFloorController.self, title: "Select Floor", description: "This demo selects a random floor", sectionTitle: "Basic"),
-        Demo(controllerClass: MapPadding.self, title: "Map Padding", description: "Adjust Map Padding", sectionTitle: "Basic"),
-        Demo(controllerClass: LocationDetailsController.self, title: "Location Details", description: "This demo shows the details of a location", sectionTitle: "Basic"),
-        // Intermediate
-        Demo(controllerClass: ShowMyLocationController.self, title: "Show My Location", description: "Mock a position provider and show user location (blue dot) and set it's Display Rule to change it's default icon", sectionTitle: "Intermediate"),
-        Demo(controllerClass: UseDelegatesController.self, title: "Custom Map Control Delegate", description: "Implement your own custom Map Control Delegate", sectionTitle: "Intermediate"),
-        Demo(controllerClass: CustomInfoWindowController.self, title: "Custom Info Window", description: "Implement your own custom Info Window", sectionTitle: "Intermediate"),
-        // Advanced: Directions
-        Demo(controllerClass: ShowDirection.self, title: "Search Directions", description: "Search locations and render route between them. Also set stair preference. Note: only avoid stairs work for now...", sectionTitle: "Advanced: Directions"),
-        Demo(controllerClass: DirectionsWithPadding.self, title: "Direction with padding", description: "Set padding for rendered route and select orientation", sectionTitle: "Advanced: Directions"),
-        // Advanced: Display Rule
-        Demo(controllerClass: ToggleLocationsVisibilityController.self, title: "Toggle Locations Visibility", description: "Set visibility via Display Rule. Change in code to not randomly select location. If everything disappears, reload.", sectionTitle: "Advanced: Display Rule"),
-        Demo(controllerClass: ChangeDisplaySettingController.self, title: "Change Display Rule", description: "Set and change Locations Display Rule at runtime", sectionTitle: "Advanced: Display Rule"),
-        // Advanced
-        Demo(controllerClass: ClusteringController.self, title: "Clustering/Collisions", description: "Enable/Disable Clustering at runtime and provide a custom icon", sectionTitle: "Advanced"),
-        Demo(controllerClass: CustomFloorSelectorController.self, title: "Custom Floor Selector", description: "Provide your own custom floor selector, reload controller if no custom floor selector is visible", sectionTitle: "Advanced"),
-        Demo(controllerClass: DatasetMapController.self, title: "Dataset/Cache", description: "Demo on MapsIndoors cache", sectionTitle: "Advanced"),
-    ]
 }
 
-private extension DemoSelectorViewController {
+extension DemoSelectorViewController: UISearchBarDelegate {
     
-    func displayNameFor(demo: Demo) -> String {
-        return demo.title
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        memoryAndZoomUI.isHidden = true
+        memoryAndZoomUI.isUserInteractionEnabled = false
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        memoryAndZoomUI.isHidden = false
+        memoryAndZoomUI.isUserInteractionEnabled = true
     }
 }
 
-extension DemoSelectorViewController: UISearchResultsUpdating {
-    
-    func updateSearchResults(for searchController: UISearchController) {
-        if let searchText = searchController.searchBar.text, !searchText.isEmpty {
-            filteredDemos = demos.filter { demo in
-                return demo.title.lowercased().contains(searchText.lowercased())
-            }
-        } else {
-            filteredDemos = demos
-        }
-        // Update sectionTitles based on filteredDemos
-        sectionTitles = Array(Set(filteredDemos.map { $0.sectionTitle })).sorted {
-            switch ($0, $1) {
-            case ("Getting Started", _): return true
-            case (_, "Getting Started"): return false
-            case ("Basic", _): return true
-            case (_, "Basic"): return false
-            case ("Intermediate", _): return true
-            case (_, "Intermediate"): return false
-            case ("Advanced", _): return true
-            case (_, "Advanced"): return false
-            default: return $0 < $1
-            }
-        }
-        // Update filteredDemos in dataSource and delegate
-        dataSource.filteredDemos = filteredDemos
-        delegate.filteredDemos = filteredDemos
-        tableView.reloadData()
+extension DemoSelectorViewController: DemoTableViewDelegateCallback {
+    func didSelectCell() {
+        memoryAndZoomUI.isHidden = false
+        memoryAndZoomUI.isUserInteractionEnabled = true
     }
 }
 
@@ -323,64 +321,3 @@ struct Demo {
     let description: String
     let sectionTitle: String
 }
-
-class DemoTableViewDataSource: NSObject, UITableViewDataSource {
-    var demos: [Demo]
-    var sectionTitles: [String]
-    var filteredDemos: [Demo]
-    
-    init(demos: [Demo], sectionTitles: [String], filteredDemos: [Demo]) {
-        self.demos = demos
-        self.sectionTitles = sectionTitles
-        self.filteredDemos = filteredDemos
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return sectionTitles.count
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let sectionTitle = sectionTitles[section]
-        return filteredDemos.filter { $0.sectionTitle == sectionTitle }.count
-    }
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return sectionTitles[section]
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "DemoTableViewCell", for: indexPath)
-        let sectionTitle = sectionTitles[indexPath.section]
-        let demosInSection = filteredDemos.filter { $0.sectionTitle == sectionTitle }
-        let demo = demosInSection[indexPath.row]
-        cell.textLabel?.text = demo.title
-        cell.textLabel?.font = UIFont.systemFont(ofSize: 18)
-        cell.detailTextLabel?.text = demo.description
-        cell.detailTextLabel?.font = UIFont.systemFont(ofSize: 14)
-        cell.detailTextLabel?.numberOfLines = 0
-        cell.accessibilityIdentifier = cell.textLabel?.text
-        return cell
-    }
-}
-
-class DemoTableViewDelegate: NSObject, UITableViewDelegate {
-    var demos: [Demo]
-    var sectionTitles: [String]
-    var filteredDemos: [Demo]
-    weak var navigationController: UINavigationController?
-    
-    init(demos: [Demo], sectionTitles: [String], filteredDemos: [Demo], navigationController: UINavigationController?) {
-        self.demos = demos
-        self.sectionTitles = sectionTitles
-        self.filteredDemos = filteredDemos
-        self.navigationController = navigationController
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let sectionTitle = sectionTitles[indexPath.section]
-        let demosInSection = filteredDemos.filter { $0.sectionTitle == sectionTitle }
-        let vc = demosInSection[indexPath.row].controllerClass.init()
-        navigationController?.pushViewController(vc, animated: true)
-    }
-}
-

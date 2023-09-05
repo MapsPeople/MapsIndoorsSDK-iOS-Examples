@@ -28,17 +28,21 @@ class BaseMapController: UIViewController {
     // To hide side panel when going back to Demo selection
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        sideMenu.isHidden = true
-        menuButton.isHidden = true
-        dropdownTable.isHidden = true
+        if sideMenu != nil {
+            sideMenu.isHidden = true
+            menuButton.isHidden = true
+            dropdownTable.isHidden = true
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupUI()
-        setupMap()
-        loadMapsIndoors()
+        Task {
+            await setupUI()
+            await setupMap()
+            await loadMapsIndoors()
+        }
     }
     
     /// This function can be overridden by subclasses to provide specific behavior. Default implementation selects `prefferdOfficeBuildingID` or a random building
@@ -83,57 +87,61 @@ class BaseMapController: UIViewController {
         return label
     }
     
-    fileprivate func setupUI() {
+    fileprivate func setupUI() async {
         startLoadingUI()
     }
     
-    fileprivate func setupMap() {
-        self.map = MapEngine.selectedMapView
-        // Add the map view as a subview instead of replacing the entire view
-        self.view.addSubview(self.map!)
-        self.map?.frame = self.view.bounds
-        
-        // Bring the activity indicator and loading label to the front of the view hierarchy
-        self.view.bringSubviewToFront(activityIndicator)
-        self.view.bringSubviewToFront(loadingLabel)
+    fileprivate func setupMap() async {
+        DispatchQueue.main.async {
+            self.map = MapEngine.selectedMapView
+            // Add the map view as a subview instead of replacing the entire view
+            self.view.addSubview(self.map!)
+            self.map?.frame = self.view.bounds
+            
+            // Bring the activity indicator and loading label to the front of the view hierarchy
+            self.view.bringSubviewToFront(self.activityIndicator)
+            self.view.bringSubviewToFront(self.loadingLabel)
+        }
     }
     
-    fileprivate func loadMapsIndoors() {
-        Task {
-            do {
-                try await loadMapsIndoorsSDK()
-                mapControl = MPMapsIndoors.createMapControl(mapConfig: MapEngine.selectedMapConfig!)
-                await setupSideMenu()
-                setupMenuButton()
-                await moveCameraToBuilding()
-                performPostLoadingActions()
-                await setupController()
-            } catch {
-                print("Failed to load MapsIndoors: \(error.localizedDescription)")
-            }
+    fileprivate func loadMapsIndoors() async {
+        do {
+            try await loadMapsIndoorsSDK()
+            mapControl = MPMapsIndoors.createMapControl(mapConfig: MapEngine.selectedMapConfig!)
+            await setupSideMenu()
+            setupMenuButton()
+            await moveCameraToBuilding()
+            performPostLoadingActions()
+            await setupController()
+        } catch {
+            print("Failed to load MapsIndoors: \(error.localizedDescription)")
+            UserDefaults.standard.set("Failed to load MapsIndoors: \(error.localizedDescription)", forKey: "MapsIndoorsError")
+            navigationController?.popViewController(animated: true)
         }
     }
     
     func startLoadingUI() {
-        activityIndicator = createActivityIndicator()
-        loadingLabel = createLoadingLabel()
-        
-        // Add the activity indicator to the view and center it
-        view.addSubview(activityIndicator)
-        NSLayoutConstraint.activate([
-            activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-        ])
-        
-        // Add the loading label to the view and position it below the activity indicator
-        view.addSubview(loadingLabel)
-        NSLayoutConstraint.activate([
-            loadingLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            loadingLabel.topAnchor.constraint(equalTo: activityIndicator.bottomAnchor, constant: 20)
-        ])
-        
-        // Start the activity indicator
-        activityIndicator.startAnimating()
+        DispatchQueue.main.async {
+            self.activityIndicator = self.createActivityIndicator()
+            self.loadingLabel = self.createLoadingLabel()
+            
+            // Add the activity indicator to the view and center it
+            self.view.addSubview(self.activityIndicator)
+            NSLayoutConstraint.activate([
+                self.activityIndicator.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+                self.activityIndicator.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
+            ])
+            
+            // Add the loading label to the view and position it below the activity indicator
+            self.view.addSubview(self.loadingLabel)
+            NSLayoutConstraint.activate([
+                self.loadingLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+                self.loadingLabel.topAnchor.constraint(equalTo: self.activityIndicator.bottomAnchor, constant: 20)
+            ])
+            
+            // Start the activity indicator
+            self.activityIndicator.startAnimating()
+        }
     }
     
     func stopLoadingUI() {
@@ -156,13 +164,15 @@ class BaseMapController: UIViewController {
     }
     
     fileprivate func setupMenuButton() {
-        menuButton = UIButton(type: .system)
-        menuButton.setImage(UIImage(systemName: "list.dash"), for: .normal)
-        menuButton.tintColor = .black
-        menuButton.backgroundColor = .systemYellow
-        menuButton.frame = CGRect(x: 10, y: 160, width: 50, height: 50)
-        menuButton.addTarget(self, action: #selector(toggleSideMenu), for: .touchUpInside)
-        view.addSubview(menuButton)
+        DispatchQueue.main.async {
+            self.menuButton = UIButton(type: .system)
+            self.menuButton.setImage(UIImage(systemName: "list.dash"), for: .normal)
+            self.menuButton.tintColor = .black
+            self.menuButton.backgroundColor = .systemYellow
+            self.menuButton.frame = CGRect(x: 10, y: 160, width: 50, height: 50)
+            self.menuButton.addTarget(self, action: #selector(self.toggleSideMenu), for: .touchUpInside)
+            self.view.addSubview(self.menuButton)
+        }
     }
 
     @objc func toggleSideMenu() {
@@ -176,14 +186,16 @@ class BaseMapController: UIViewController {
     }
     
     fileprivate func setupSideMenu() async {
-        let menuWidth: CGFloat = 200
-        let menuHeight: CGFloat = view.bounds.height
-        
-        sideMenu = UIView(frame: CGRect(x: -menuWidth, y: 0, width: menuWidth, height: menuHeight))
-        sideMenu.backgroundColor = .systemTeal
-        
-        // Add the menu to the view
-        view.addSubview(sideMenu)
+        DispatchQueue.main.async {
+            let menuWidth: CGFloat = 200
+            let menuHeight: CGFloat = self.view.bounds.height
+            
+            self.sideMenu = UIView(frame: CGRect(x: -menuWidth, y: 0, width: menuWidth, height: menuHeight))
+            self.sideMenu.backgroundColor = .systemTeal
+            
+            // Add the menu to the view
+            self.view.addSubview(self.sideMenu)
+        }
         setupDropdownTable()
         await populateDropdownTable()
     }
@@ -201,25 +213,27 @@ class BaseMapController: UIViewController {
     }
     
     fileprivate func setupDropdownTable() {
-        let padding: CGFloat = 210  // Padding for menuButton
-        
-        dropdownDataSource = DropdownDataSource { [weak self] choice in
-            Task {
-                guard let self = self else { return }
-                
-                self.prefferdOfficeBuildingID = choice
-                self.currentBuilding = await MPMapsIndoors.shared.buildingWith(id: choice)
-                
-                await self.moveCameraToBuilding()
-                self.hideSideMenu()
+        DispatchQueue.main.async {
+            let padding: CGFloat = 210  // Padding for menuButton
+            
+            self.dropdownDataSource = DropdownDataSource { [weak self] choice in
+                Task {
+                    guard let self = self else { return }
+                    
+                    self.prefferdOfficeBuildingID = choice
+                    self.currentBuilding = await MPMapsIndoors.shared.buildingWith(id: choice)
+                    
+                    await self.moveCameraToBuilding()
+                    self.hideSideMenu()
+                }
             }
+            
+            self.dropdownTable = UITableView(frame: CGRect(x: self.sideMenu.bounds.origin.x, y: padding, width: self.sideMenu.bounds.width, height: self.sideMenu.bounds.height - padding), style: .plain)
+            self.dropdownTable.delegate = self.dropdownDataSource
+            self.dropdownTable.dataSource = self.dropdownDataSource
+            self.dropdownTable.register(UITableViewCell.self, forCellReuseIdentifier: "DropdownCell")
+            self.sideMenu.addSubview(self.dropdownTable)
         }
-        
-        dropdownTable = UITableView(frame: CGRect(x: sideMenu.bounds.origin.x, y: padding, width: sideMenu.bounds.width, height: sideMenu.bounds.height - padding), style: .plain)
-        dropdownTable.delegate = dropdownDataSource
-        dropdownTable.dataSource = dropdownDataSource
-        dropdownTable.register(UITableViewCell.self, forCellReuseIdentifier: "DropdownCell")
-        sideMenu.addSubview(dropdownTable)
     }
     
     func populateDropdownTable() async {
@@ -236,8 +250,11 @@ class BaseMapController: UIViewController {
                 }
             }
         }
-        dropdownDataSource.venuesWithBuildings = venuesWithBuildings
-        dropdownTable.reloadData()
+        
+        DispatchQueue.main.async {
+            self.dropdownDataSource.venuesWithBuildings = venuesWithBuildings
+            self.dropdownTable.reloadData()
+        }
     }
 }
 

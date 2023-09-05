@@ -322,7 +322,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		jn5E1iSWExWZNZBCyTSh92a0O1Y=
+		YJzLIlYx4tum6L6IvNAXu88zgDw=
 		</data>
 		<key>Modules/MapboxCommon.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -594,7 +594,7 @@
 		</data>
 		<key>PrivateHeaders/MBXMovementMode_Internal.h</key>
 		<data>
-		8OFZqG21C/TxQ1dF9ySY2kndea8=
+		uy6TXPDPd6maMUY25QTAhTDkm7M=
 		</data>
 		<key>PrivateHeaders/MBXMovementMonitorFactory_Internal.h</key>
 		<data>
@@ -642,7 +642,7 @@
 		</data>
 		<key>PrivateHeaders/MBXReachabilityInterface_Internal.h</key>
 		<data>
-		CGCCMXfGbEyEwBPO6FxrJzlgqrQ=
+		LMDQhyc7JFX/1svPWbKC30q3E4g=
 		</data>
 		<key>PrivateHeaders/MBXResourceData_Internal.h</key>
 		<data>
@@ -1929,7 +1929,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xLkvk1JYucHDtHEsH+ML8W0tkO6stGfOTT0efYzRldQ=
+			ZnRAOY8Dqk2YA4+AyTkdDUsjCYa6PzcqfKqpYp+EvAU=
 			</data>
 		</dict>
 		<key>PrivateHeaders/MBXMovementMonitorFactory_Internal.h</key>
@@ -2013,7 +2013,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xR0a7dVG2ln+OviEzNIOnQAE27UCGe0NrK/3milG7ds=
+			YWzokWxvr4/qy41Nf+BT6bsBvvKwM7X7g33MpLXOfCs=
 			</data>
 		</dict>
 		<key>PrivateHeaders/MBXResourceData_Internal.h</key>

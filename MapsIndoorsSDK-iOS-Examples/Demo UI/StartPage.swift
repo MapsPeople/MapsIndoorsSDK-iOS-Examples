@@ -32,6 +32,7 @@ class StartPage: UIViewController {
     
     @IBAction func loadAPIKey(_ sender: Any) {
         presentDemoSelectorViewController(apiKey: apiTextField.text)
+        UserDefaults.standard.set(apiTextField.text, forKey: "SavedAPIKey")
     }
     
     private func presentDemoSelectorViewController(apiKey: String?) {
@@ -49,5 +50,8 @@ class StartPage: UIViewController {
         super.viewDidLoad()
         // Adjusts the background color based on the interface style
         self.view.backgroundColor = UIColor.systemBackground
+        if let savedAPIKey = UserDefaults.standard.string(forKey: "SavedAPIKey") {
+            apiTextField.text = savedAPIKey
+        }
     }
 }

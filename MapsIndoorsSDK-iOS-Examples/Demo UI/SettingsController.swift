@@ -95,7 +95,12 @@ class SettingsController: UIViewController {
     @IBOutlet weak var sdkLabel: UILabel!
     
     func MPVersion() {
-        let buildNumber = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as? String
-        sdkLabel.text = "SDK: \(buildNumber!)"
+        if let mapsIndoorsBundle = Bundle(identifier: "com.mapspeople.mapsindoors"),
+           let infoDict = mapsIndoorsBundle.infoDictionary,
+           let version = infoDict["CFBundleShortVersionString"] as? String {
+            sdkLabel.text = "SDK: \(version)"
+        } else {
+            sdkLabel.text = "SDK: Version not found"
+        }
     }
 }

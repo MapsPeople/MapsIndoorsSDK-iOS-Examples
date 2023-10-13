@@ -193,8 +193,7 @@ class PureCiscoDNAProvider: NSObject, MPPositionProvider {
     private func subscribeToCiscoDNAPositioning() {
         guard let tenId = tenantId, let deviceId = ciscoDeviceId else { return }
 
-        //let topic = MPWirelessPositionTopic(tenantId: tenId, deviceId: deviceId)
-        let topic = MyTopic(topic: tenId+deviceId)
+        let topic = MPCiscoPositionTopic(tenantId: tenId, deviceId: deviceId)
         mqttClient.subscribe(topic)
     }
 
@@ -291,10 +290,23 @@ extension UIDevice {
     }
 }
 
-fileprivate class MyTopic: MPSubscriptionTopic {
-    var topicString: String
+class MPCiscoPositionTopic: MPSubscriptionTopic {
+
+    private var deviceId: String
+    private var tenantId: String
+
+    init(tenantId: String, deviceId: String) {
+        self.deviceId = deviceId
+        self.tenantId = tenantId
+    }
 
     required init(topic: String) {
-        self.topicString = topic
+        let comps = topic.split(separator: "/")
+        self.tenantId = String(comps[1])
+        self.deviceId = String(comps[2])
+    }
+
+    var topicString: String {
+        return "ciscodna/\(tenantId)/\(deviceId)/position"
     }
 }

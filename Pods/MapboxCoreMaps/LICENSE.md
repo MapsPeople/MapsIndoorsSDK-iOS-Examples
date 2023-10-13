@@ -1,4 +1,4 @@
-### MapboxCoreMaps,10.15.0,Mapbox ToS,Mapbox,https://www.mapbox.com/
+### MapboxCoreMaps,10.16.1,Mapbox ToS,Mapbox,https://www.mapbox.com/
 
 ```
 Mapbox Core Maps version 10.0

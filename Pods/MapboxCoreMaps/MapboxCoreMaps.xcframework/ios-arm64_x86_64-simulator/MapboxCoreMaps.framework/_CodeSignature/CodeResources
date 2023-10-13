@@ -430,7 +430,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ScO5iLim+7jNI+0HHJOGVMFWfw4=
+		3xQnwSYFuTtVUCpzARI3v7WbBGA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -439,6 +439,10 @@
 		<key>Modules/module.private.modulemap</key>
 		<data>
 		7XyHrALPj0ZnAS9t1I5TJPbwyS8=
+		</data>
+		<key>PrivacyInfo.xcprivacy</key>
+		<data>
+		sKyE+8E8R0S1icmhE/2IujRpcZk=
 		</data>
 		<key>PrivateHeaders/AsyncOperationResultCallback_Internal.h</key>
 		<data>
@@ -1349,6 +1353,13 @@
 			<key>hash2</key>
 			<data>
 			SCpcrACsmbQiCwNpMl/IO8uKdIeoVtoG+UiY9uRBcOA=
+			</data>
+		</dict>
+		<key>PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			VLSwqZJBscKBDU0PnoBW92RnwG8nSRjc5IZ+8w9AvCY=
 			</data>
 		</dict>
 		<key>PrivateHeaders/AsyncOperationResultCallback_Internal.h</key>

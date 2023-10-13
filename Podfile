@@ -6,8 +6,8 @@ target 'MapsIndoorsSDK-iOS-Examples' do
   # Comment the next line if you don't want to use dynamic frameworks
   #use_frameworks!
   # Pods for MapsIndoorsSDK-iOS-Examples
-  pod 'MapsIndoorsGoogleMaps', '4.2.4'
-  pod 'MapsIndoorsMapbox', '4.2.4'
+  pod 'MapsIndoorsGoogleMaps', '4.2.6'
+  pod 'MapsIndoorsMapbox', '4.2.6'
 end
 
 PROJECT_ROOT_DIR = File.dirname(File.expand_path(__FILE__))

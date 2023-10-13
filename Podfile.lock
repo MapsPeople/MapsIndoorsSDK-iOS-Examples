@@ -4,34 +4,34 @@ PODS:
   - GoogleMaps/Base (7.4.0)
   - GoogleMaps/Maps (7.4.0):
     - GoogleMaps/Base
-  - MapboxCommon (23.7.0)
-  - MapboxCoreMaps (10.15.0):
-    - MapboxCommon (~> 23.7)
+  - MapboxCommon (23.8.3)
+  - MapboxCoreMaps (10.16.1):
+    - MapboxCommon (~> 23.8)
   - MapboxDirections (2.10.0):
     - Polyline (~> 5.0)
     - Turf (~> 2.6.1)
-  - MapboxMaps (10.15.0):
-    - MapboxCommon (= 23.7.0)
-    - MapboxCoreMaps (= 10.15.0)
+  - MapboxMaps (10.16.1):
+    - MapboxCommon (= 23.8.3)
+    - MapboxCoreMaps (= 10.16.1)
     - MapboxMobileEvents (= 1.0.10)
     - Turf (~> 2.0)
   - MapboxMobileEvents (1.0.10)
-  - MapsIndoors (4.2.4)
-  - MapsIndoorsCore (4.2.4):
-    - MapsIndoors (= 4.2.4)
-  - MapsIndoorsGoogleMaps (4.2.4):
+  - MapsIndoors (4.2.6)
+  - MapsIndoorsCore (4.2.6):
+    - MapsIndoors (= 4.2.6)
+  - MapsIndoorsGoogleMaps (4.2.6):
     - GoogleMaps (= 7.4.0)
-    - MapsIndoorsCore (= 4.2.4)
-  - MapsIndoorsMapbox (4.2.4):
+    - MapsIndoorsCore (= 4.2.6)
+  - MapsIndoorsMapbox (4.2.6):
     - MapboxDirections (= 2.10.0)
-    - MapboxMaps (= 10.15.0)
-    - MapsIndoorsCore (= 4.2.4)
+    - MapboxMaps (= 10.16.1)
+    - MapsIndoorsCore (= 4.2.6)
   - Polyline (5.1.0)
   - Turf (2.6.1)
 
 DEPENDENCIES:
-  - MapsIndoorsGoogleMaps (= 4.2.4)
-  - MapsIndoorsMapbox (= 4.2.4)
+  - MapsIndoorsGoogleMaps (= 4.2.6)
+  - MapsIndoorsMapbox (= 4.2.6)
 
 SPEC REPOS:
   trunk:
@@ -50,18 +50,18 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   GoogleMaps: 032f676450ba0779bd8ce16840690915f84e57ac
-  MapboxCommon: dcbdb86acbcfc1a23efd341ed097c6c63ab532a9
-  MapboxCoreMaps: bcbaac14467616940187f79bba49ca491cd37906
+  MapboxCommon: b2c348867dfed7d7a23545e6c2024d712bfda10f
+  MapboxCoreMaps: c66f482b5ea983cf873122853c4ee94c159bec43
   MapboxDirections: a620d78a54312c392323ba211df8ae7dd9a28ab4
-  MapboxMaps: 1fd9d97d0e8eceb7a45b9ac8bf87a8922da881a8
+  MapboxMaps: fdbe05e3899abd24f31a7f91789586e44e57f7fc
   MapboxMobileEvents: de50b3a4de180dd129c326e09cd12c8adaaa46d6
-  MapsIndoors: 33a6227d6ec28d35acae35c4439be1202c9498c2
-  MapsIndoorsCore: b0411a10a7a19265a783ae1e6921d2e76c34e2b3
-  MapsIndoorsGoogleMaps: 9a5f27b9491a55467a26a1802bfac2bbaeca355d
-  MapsIndoorsMapbox: ec4b977500ee8decf4d29c38b72cca3b790b5762
+  MapsIndoors: 9b2765c170f0c577cecde71ef72ab29e4d1491ac
+  MapsIndoorsCore: 6073134c65bea1d6317637f2beb21bf81505bbe1
+  MapsIndoorsGoogleMaps: d07b62ecff5189ecb05098bbcb50fa862989e500
+  MapsIndoorsMapbox: 81986386a3266d2c2be5fae98ccce83d0a8cfefe
   Polyline: 2a1f29f87f8d9b7de868940f4f76deb8c678a5b1
   Turf: 469ce2c3d22e5e8e4818d5a3b254699a5c89efa4
 
-PODFILE CHECKSUM: f2c933e79e1278971906a84eea0a0adc2200de16
+PODFILE CHECKSUM: 4de47ccdc80bf748416fe97678585e31e09acb05
 
-COCOAPODS: 1.12.1
+COCOAPODS: 1.13.0

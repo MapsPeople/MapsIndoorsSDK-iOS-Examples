@@ -278,7 +278,7 @@
 		</data>
 		<key>Headers/MapboxCommon-Swift.h</key>
 		<data>
-		BnMrdrGym4VE4OfmT/Y9VyTpKDY=
+		if4tkhS5bQwQe1VOgkmGm1OsXdE=
 		</data>
 		<key>Headers/MapboxCommon.h</key>
 		<data>
@@ -322,63 +322,59 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		YJzLIlYx4tum6L6IvNAXu88zgDw=
+		1nOnvrnaIrMakjGfoswk10ZXi04=
+		</data>
+		<key>Modules/MapboxCommon.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
+		<data>
+		5jQJYXWyPXX2UqW5EoSQHerJd38=
+		</data>
+		<key>Modules/MapboxCommon.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
+		<data>
+		jXbLSMvGsqr7ftdtBma3QLnO3po=
 		</data>
 		<key>Modules/MapboxCommon.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		vbGR/O+9nWygrQJA+/R6NWqtqcE=
+		jArPW8QfsBUgV97AT7Gzzal/xjw=
 		</data>
 		<key>Modules/MapboxCommon.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		3quwdEgHOX1TwItEG8K2OhV7SXE=
+		jXbLSMvGsqr7ftdtBma3QLnO3po=
 		</data>
 		<key>Modules/MapboxCommon.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		DnyJnAwsVxZeFCQXm5AEm1m9pX0=
+		8eh3z/iYtng4wTwk8xeUJG52eOc=
 		</data>
-		<key>Modules/MapboxCommon.swiftmodule/arm64.swiftdoc</key>
+		<key>Modules/MapboxCommon.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		vbGR/O+9nWygrQJA+/R6NWqtqcE=
+		5jQJYXWyPXX2UqW5EoSQHerJd38=
 		</data>
-		<key>Modules/MapboxCommon.swiftmodule/arm64.swiftinterface</key>
+		<key>Modules/MapboxCommon.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		3quwdEgHOX1TwItEG8K2OhV7SXE=
-		</data>
-		<key>Modules/MapboxCommon.swiftmodule/arm64.swiftmodule</key>
-		<data>
-		DnyJnAwsVxZeFCQXm5AEm1m9pX0=
+		M02znSrpetN5ICcNB5+cnudRuJk=
 		</data>
 		<key>Modules/MapboxCommon.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		+bADbUQJiJShAP/VLipFIgtQk2Y=
+		TsGUG2CdOnqjjK4+JZVCwIIF5hQ=
 		</data>
 		<key>Modules/MapboxCommon.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		wLYSZZGVHqDcUXh8Gqkoxa5hv+g=
+		M02znSrpetN5ICcNB5+cnudRuJk=
 		</data>
 		<key>Modules/MapboxCommon.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		R/wflJJ5Ig3Ma1m7xu/w5LqaGmY=
-		</data>
-		<key>Modules/MapboxCommon.swiftmodule/x86_64.swiftdoc</key>
-		<data>
-		+bADbUQJiJShAP/VLipFIgtQk2Y=
-		</data>
-		<key>Modules/MapboxCommon.swiftmodule/x86_64.swiftinterface</key>
-		<data>
-		wLYSZZGVHqDcUXh8Gqkoxa5hv+g=
-		</data>
-		<key>Modules/MapboxCommon.swiftmodule/x86_64.swiftmodule</key>
-		<data>
-		R/wflJJ5Ig3Ma1m7xu/w5LqaGmY=
+		EP2rsNZ4/bBK1MtxHDuWBMLOySE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		cnIMkSID1E2zl4G8pmloHRkwSKI=
+		gWTFAcwRS6mO8c3RppqjplAsZUs=
 		</data>
 		<key>Modules/module.private.modulemap</key>
 		<data>
 		1WDuhgfiuvBZUPQdwtWrNSmIJ6o=
+		</data>
+		<key>PrivacyInfo.xcprivacy</key>
+		<data>
+		b2f91Hy40ZrF9zJ7lu7O1lfXRlE=
 		</data>
 		<key>PrivateHeaders/MBXBatteryChargingStatusCallback_Internal.h</key>
 		<data>
@@ -526,7 +522,7 @@
 		</data>
 		<key>PrivateHeaders/MBXHttpCertificatePinsProvider_Internal.h</key>
 		<data>
-		qxe9wnW0xMkOFqqczoBiVFSw5l8=
+		J6qC+2Ih4A5F+vcjJRWfY1DeQKw=
 		</data>
 		<key>PrivateHeaders/MBXHttpResponse_Internal.h</key>
 		<data>
@@ -720,6 +716,10 @@
 		<data>
 		WJK88Ex5XU4LwAYar1K3ghR7NsM=
 		</data>
+		<key>PrivateHeaders/MBXTelemetryCollectionStateObserver_Internal.h</key>
+		<data>
+		4Pb603hszlOl/WiEj8fc5AoxGEY=
+		</data>
 		<key>PrivateHeaders/MBXTelemetryCollectionState_Internal.h</key>
 		<data>
 		IslrXRYXLQ7SyLkjwyLxdrsYYuM=
@@ -734,7 +734,7 @@
 		</data>
 		<key>PrivateHeaders/MBXTelemetryUtils_Internal.h</key>
 		<data>
-		/AofRcdAIO0k0NSI+lew36WQbeI=
+		YYFH86Pa0gHJ8ibwzm0Dy+xpTQU=
 		</data>
 		<key>PrivateHeaders/MBXTileRegionBooleanCallback_Internal.h</key>
 		<data>
@@ -874,7 +874,7 @@
 		</data>
 		<key>PrivateHeaders/MapboxTelemetryUtils_Internal.h</key>
 		<data>
-		0/PGMSPrjCHlJN/WeT39nh/seXo=
+		9zhgUzVqdwcw/0Ce1sUY2QxOakk=
 		</data>
 		<key>PrivateHeaders/MapboxTelemetry_Internal.h</key>
 		<data>
@@ -1383,7 +1383,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			CHL7RxMDQ0YcR0ecRCqs4R7v5SLqEL3lC25fX28ZNx8=
+			ng/m5rvdK/ItKuJC7A2tO4jeyLlLdhFvkwLEg7tqJr8=
 			</data>
 		</dict>
 		<key>Headers/MapboxCommon.h</key>
@@ -1456,95 +1456,81 @@
 			ybFp871o0qznEXs+51rPTRx2G0AaHh7DSYsbj2g78sc=
 			</data>
 		</dict>
+		<key>Modules/MapboxCommon.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			RdsQwj6GejM7KDd+u/RjmEFciDp3bsImNHHFewtRU8w=
+			</data>
+		</dict>
+		<key>Modules/MapboxCommon.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			5tNQIsMK5jOADzkk+2RHpEq7rIJdKG8Yerak8s6SRRE=
+			</data>
+		</dict>
 		<key>Modules/MapboxCommon.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			PReESUc19LUEGPR5xjlQUIjQfh2prnBR+5DJ2qDhnpA=
+			jznfN5JTRm2UMoGhbm6+XLuoyLVPZWm6gmuUmPwCmSw=
 			</data>
 		</dict>
 		<key>Modules/MapboxCommon.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9U7BnhS6tvrTswvLyK2GOB88jxopaVeuDzBo5b62qcQ=
+			5tNQIsMK5jOADzkk+2RHpEq7rIJdKG8Yerak8s6SRRE=
 			</data>
 		</dict>
 		<key>Modules/MapboxCommon.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Qn+EwMAgTzCIKYk5lyYj4EbXNpUaGL6ewhyYf9CT5Cw=
+			e8dmogI94ng/z0MqKINECUIR+A7gxqMbfgQxFM+fLSY=
 			</data>
 		</dict>
-		<key>Modules/MapboxCommon.swiftmodule/arm64.swiftdoc</key>
+		<key>Modules/MapboxCommon.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			PReESUc19LUEGPR5xjlQUIjQfh2prnBR+5DJ2qDhnpA=
+			RdsQwj6GejM7KDd+u/RjmEFciDp3bsImNHHFewtRU8w=
 			</data>
 		</dict>
-		<key>Modules/MapboxCommon.swiftmodule/arm64.swiftinterface</key>
+		<key>Modules/MapboxCommon.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9U7BnhS6tvrTswvLyK2GOB88jxopaVeuDzBo5b62qcQ=
-			</data>
-		</dict>
-		<key>Modules/MapboxCommon.swiftmodule/arm64.swiftmodule</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Qn+EwMAgTzCIKYk5lyYj4EbXNpUaGL6ewhyYf9CT5Cw=
+			ymgaTSsI8F2N6fnvuMF27KPFKQdrAO1tx82kmLDarys=
 			</data>
 		</dict>
 		<key>Modules/MapboxCommon.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jYmlcvPard0jEBcU4oSgLExlyzl3thGYgvgBd0IeZ8k=
+			6xPG5YxlT3ntmUWJ7j0i0gLtQf7zTt82XtgaPTpMOUE=
 			</data>
 		</dict>
 		<key>Modules/MapboxCommon.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SwDMLQg94ua+KSTbAJyxeQAXrbkTvGhrKOwXlJb1VSY=
+			ymgaTSsI8F2N6fnvuMF27KPFKQdrAO1tx82kmLDarys=
 			</data>
 		</dict>
 		<key>Modules/MapboxCommon.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bPeIByzr1CucNHEL3pD6B5O8kXv7aBi2y4uqf5iyQe8=
-			</data>
-		</dict>
-		<key>Modules/MapboxCommon.swiftmodule/x86_64.swiftdoc</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			jYmlcvPard0jEBcU4oSgLExlyzl3thGYgvgBd0IeZ8k=
-			</data>
-		</dict>
-		<key>Modules/MapboxCommon.swiftmodule/x86_64.swiftinterface</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			SwDMLQg94ua+KSTbAJyxeQAXrbkTvGhrKOwXlJb1VSY=
-			</data>
-		</dict>
-		<key>Modules/MapboxCommon.swiftmodule/x86_64.swiftmodule</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			bPeIByzr1CucNHEL3pD6B5O8kXv7aBi2y4uqf5iyQe8=
+			63TVc2XwNld7LZXMN6dRlqRLnCycEILavRXVB33O8js=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			O52scEFLQxXWEAh9hWqr/X3pvmoWTl86edpKEdgGGwM=
+			kt7ngkF83CaWXyN8nYmV88n3LnzRuXH3zw27aeK8EKc=
 			</data>
 		</dict>
 		<key>Modules/module.private.modulemap</key>
@@ -1552,6 +1538,13 @@
 			<key>hash2</key>
 			<data>
 			TFYbr7poSqMk92fMVcu/h4pgnd2jox0bbbB3ilwEtsI=
+			</data>
+		</dict>
+		<key>PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ZVIy53+MSHrDkFIJ5vPToufDmZDYFm8IbMbR0qJZQ7E=
 			</data>
 		</dict>
 		<key>PrivateHeaders/MBXBatteryChargingStatusCallback_Internal.h</key>
@@ -1810,7 +1803,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			L2lkOPKYgrUR6izEIIH6R1zhIZk+tva4OWZfQ4e1T5w=
+			Pz8eVMvsr4ZRA98MTemfFup64CLG7HHPr5pDhon0LHo=
 			</data>
 		</dict>
 		<key>PrivateHeaders/MBXHttpResponse_Internal.h</key>
@@ -2149,6 +2142,13 @@
 			Wm6cAcFS4IQDA9jZWWOUSKgdRWivb+665HE5pETfwwk=
 			</data>
 		</dict>
+		<key>PrivateHeaders/MBXTelemetryCollectionStateObserver_Internal.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ivpfFNRZXnNJby6ctdvDj41DgZI5zvyEEHDJSu29bEY=
+			</data>
+		</dict>
 		<key>PrivateHeaders/MBXTelemetryCollectionState_Internal.h</key>
 		<dict>
 			<key>hash2</key>
@@ -2174,7 +2174,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			DYn+XTGn7GBIzE571rbse2Es8wMCxLsDYmpgi6kNTrI=
+			fcQg2RoUfZkJmTa2Hz6lRKk/qpAZvzPJ2ZSrzt5e15I=
 			</data>
 		</dict>
 		<key>PrivateHeaders/MBXTileRegionBooleanCallback_Internal.h</key>
@@ -2419,7 +2419,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rz/yHIg3JZvfuIWkufxlgy4+meti+7rlt2wIWgvPvHs=
+			YlUohBPS3Ov0zbaLpR9F2ETy9mL4uC1F7eVjEQj3kck=
 			</data>
 		</dict>
 		<key>PrivateHeaders/MapboxTelemetry_Internal.h</key>

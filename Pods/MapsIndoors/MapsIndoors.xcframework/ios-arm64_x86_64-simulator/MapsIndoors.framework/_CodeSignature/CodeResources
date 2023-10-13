@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/MapsIndoors-Swift.h</key>
 		<data>
-		2eOCrFMT9w8eJ+aszu8LSZ18iCc=
+		176FEQe/R0+6Y0BpduoeD9+E0FA=
 		</data>
 		<key>Headers/MapsIndoors.h</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		wiOcrMiPULI4ZTAUIa3FJ9xob7I=
+		lKnKJW8KTRArh2uWW5Kv6s6gkM0=
 		</data>
 		<key>MapsIndoors.bundle/.gitkeep</key>
 		<data>
@@ -184,43 +184,43 @@
 		</data>
 		<key>Modules/MapsIndoors.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		87mGA+PeFaJJdSraSj5Aga7jGpA=
+		pJKjM0OFmBpq7KFmd/H4Rt/dpwQ=
 		</data>
 		<key>Modules/MapsIndoors.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		tSJAkQ6IubzqqrEn/314iN+CKuc=
+		Nx24gPB8uns5e3uHQBZ9rTkKgbE=
 		</data>
 		<key>Modules/MapsIndoors.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		fvj8n9KzHg7i2DcEJk13SoX2DL8=
+		bu7yOmVRkyft9fZ51Wafq0lhAQc=
 		</data>
 		<key>Modules/MapsIndoors.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		tSJAkQ6IubzqqrEn/314iN+CKuc=
+		Nx24gPB8uns5e3uHQBZ9rTkKgbE=
 		</data>
 		<key>Modules/MapsIndoors.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		iQ00DXDy72RAnqaMXKDOPweBGT4=
+		DPl9xFweSpV1Maxpa0FGEa+Leyk=
 		</data>
 		<key>Modules/MapsIndoors.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		87mGA+PeFaJJdSraSj5Aga7jGpA=
+		pJKjM0OFmBpq7KFmd/H4Rt/dpwQ=
 		</data>
 		<key>Modules/MapsIndoors.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		3RKoN1Rn/RB4HhIyl+F5SVVnLm0=
+		fqOKuwkAHTv7bRw7rx40GPPI4Gk=
 		</data>
 		<key>Modules/MapsIndoors.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		FX3eGD/wds6NEhHqy8hIhglYOUc=
+		/VKNvLZ0jP+WvUYqe46wpZZrhCU=
 		</data>
 		<key>Modules/MapsIndoors.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		3RKoN1Rn/RB4HhIyl+F5SVVnLm0=
+		fqOKuwkAHTv7bRw7rx40GPPI4Gk=
 		</data>
 		<key>Modules/MapsIndoors.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		SVHn4Dwevgaw9ydjOsPoPDWxVIQ=
+		Sg2H4TAv7Wly8SorJJNRjx7lANM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -233,7 +233,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			7SizCKCmm6s5qab9XUA/l7hado5rWQEp0BlIkYFj5uI=
+			VqfK/MAYKybyunLHZ7JjKwdPJqAkPUC1SBqFOs6zWJ8=
 			</data>
 		</dict>
 		<key>Headers/MapsIndoors.h</key>
@@ -524,70 +524,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pu3ooXQOwtfFdpJ9QstOHA1J0lUoTW9UV5jCDNZc0u8=
+			B821V4FgPhUTfiBBRlNcxOsNDN8O7pYn1m8x0SUM28Y=
 			</data>
 		</dict>
 		<key>Modules/MapsIndoors.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MnwpPT+gYHPkp5q3DuIJMyycyvmHD2yge98V9eO+AcE=
+			8HnImGead9ETA/xtOJX6z+mlPut9So1b0de/6kx5pVE=
 			</data>
 		</dict>
 		<key>Modules/MapsIndoors.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lsg+JqSdm+A36lvi1Hb7J8wSDYIhE4sBYbruriovse4=
+			at9wkLUPU7wyHIOCkbE7Apg0S2Dq8QuZt9KaNj+ZvlQ=
 			</data>
 		</dict>
 		<key>Modules/MapsIndoors.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MnwpPT+gYHPkp5q3DuIJMyycyvmHD2yge98V9eO+AcE=
+			8HnImGead9ETA/xtOJX6z+mlPut9So1b0de/6kx5pVE=
 			</data>
 		</dict>
 		<key>Modules/MapsIndoors.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			sKArA6e49l0XNyTNkkBscrz+YFlLNjc76b6MDndMhUk=
+			21RI3TK8RaObHueiCvvxMDStYSu4ujpcpVV75JxtXbk=
 			</data>
 		</dict>
 		<key>Modules/MapsIndoors.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			pu3ooXQOwtfFdpJ9QstOHA1J0lUoTW9UV5jCDNZc0u8=
+			B821V4FgPhUTfiBBRlNcxOsNDN8O7pYn1m8x0SUM28Y=
 			</data>
 		</dict>
 		<key>Modules/MapsIndoors.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ugfNy19FPbcJcq75KZ8n9JKKJG7JLgRAIyqSaVTtSpA=
+			gjSxKB8xGh7OeB2uxDul2QeZi71DQYxC5YNhkjuSO0U=
 			</data>
 		</dict>
 		<key>Modules/MapsIndoors.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7LFSXbHgCcitkj4sDg6EjXnqwH4GymJ+avzO2g5P7y8=
+			uiud9CVYbgpDujI2+6X/15P2Rh6bYrCHaT+8659IUeA=
 			</data>
 		</dict>
 		<key>Modules/MapsIndoors.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ugfNy19FPbcJcq75KZ8n9JKKJG7JLgRAIyqSaVTtSpA=
+			gjSxKB8xGh7OeB2uxDul2QeZi71DQYxC5YNhkjuSO0U=
 			</data>
 		</dict>
 		<key>Modules/MapsIndoors.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xh2NtjOeWTX/7hD3f6+ZyaRe/Q2CiDynNnfpDVBe/3k=
+			KV4vAFjifnLNGCBwMoojJiHAwCxzUMgF9AmVgwIKwXo=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

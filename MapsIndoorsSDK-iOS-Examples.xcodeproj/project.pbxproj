@@ -30,6 +30,8 @@
 		4D46522C2AA71216009AD4D6 /* DemoTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D46522B2AA71216009AD4D6 /* DemoTableViewDataSource.swift */; };
 		4D46522E2AA71234009AD4D6 /* DemoTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D46522D2AA71234009AD4D6 /* DemoTableViewDelegate.swift */; };
 		4D4652302AA712C4009AD4D6 /* MemoryAndZoomUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D46522F2AA712C4009AD4D6 /* MemoryAndZoomUI.swift */; };
+		4DAB68012AD94217005BEF5A /* PureCiscoDNAProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAB68002AD94217005BEF5A /* PureCiscoDNAProvider.swift */; };
+		4DAB68032AD9422A005BEF5A /* IndoorPositioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAB68022AD9422A005BEF5A /* IndoorPositioning.swift */; };
 		4DB9BEFB2A9769BE00C4D7FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9BEFA2A9769BE00C4D7FE /* AppDelegate.swift */; };
 		4DB9BEFD2A9769BE00C4D7FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9BEFC2A9769BE00C4D7FE /* SceneDelegate.swift */; };
 		4DB9BF022A9769BE00C4D7FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DB9BF002A9769BE00C4D7FE /* Main.storyboard */; };
@@ -72,6 +74,8 @@
 		4D46522B2AA71216009AD4D6 /* DemoTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTableViewDataSource.swift; sourceTree = "<group>"; };
 		4D46522D2AA71234009AD4D6 /* DemoTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTableViewDelegate.swift; sourceTree = "<group>"; };
 		4D46522F2AA712C4009AD4D6 /* MemoryAndZoomUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryAndZoomUI.swift; sourceTree = "<group>"; };
+		4DAB68002AD94217005BEF5A /* PureCiscoDNAProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PureCiscoDNAProvider.swift; sourceTree = "<group>"; };
+		4DAB68022AD9422A005BEF5A /* IndoorPositioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndoorPositioning.swift; sourceTree = "<group>"; };
 		4DB9BEF72A9769BE00C4D7FE /* MapsIndoorsSDK-iOS-Examples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MapsIndoorsSDK-iOS-Examples.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DB9BEFA2A9769BE00C4D7FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DB9BEFC2A9769BE00C4D7FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +147,7 @@
 		4D1F963C2A9C96FE0034CA87 /* Advanced */ = {
 			isa = PBXGroup;
 			children = (
+				4DAB67FE2AD941DD005BEF5A /* Position Provider */,
 				4D1F96542A9DEAF00034CA87 /* Directions */,
 				4D1F96592A9DEF120034CA87 /* Display Rule */,
 				4D1F965E2A9DF26F0034CA87 /* ClusteringController.swift */,
@@ -186,6 +191,23 @@
 				4D1F96672A9DF5570034CA87 /* DatasetListController.swift */,
 			);
 			path = "Dataset Manager";
+			sourceTree = "<group>";
+		};
+		4DAB67FE2AD941DD005BEF5A /* Position Provider */ = {
+			isa = PBXGroup;
+			children = (
+				4DAB67FF2AD941EA005BEF5A /* CiscoDNA */,
+				4DAB68022AD9422A005BEF5A /* IndoorPositioning.swift */,
+			);
+			path = "Position Provider";
+			sourceTree = "<group>";
+		};
+		4DAB67FF2AD941EA005BEF5A /* CiscoDNA */ = {
+			isa = PBXGroup;
+			children = (
+				4DAB68002AD94217005BEF5A /* PureCiscoDNAProvider.swift */,
+			);
+			path = CiscoDNA;
 			sourceTree = "<group>";
 		};
 		4DB9BEEE2A9769BE00C4D7FE = {
@@ -420,6 +442,8 @@
 				4DB9BEFD2A9769BE00C4D7FE /* SceneDelegate.swift in Sources */,
 				4D1F965B2A9DEF460034CA87 /* ToggleLocationsVisibilityController.swift in Sources */,
 				4DB9BF182A9771A800C4D7FE /* GenericMap.swift in Sources */,
+				4DAB68012AD94217005BEF5A /* PureCiscoDNAProvider.swift in Sources */,
+				4DAB68032AD9422A005BEF5A /* IndoorPositioning.swift in Sources */,
 				4D1F96632A9DF44B0034CA87 /* CustomFloorSelectorController.swift in Sources */,
 				4D1F96382A9C8F2E0034CA87 /* BasicLiveData.swift in Sources */,
 				4DB9BF1A2A97736000C4D7FE /* APIKeys.swift in Sources */,

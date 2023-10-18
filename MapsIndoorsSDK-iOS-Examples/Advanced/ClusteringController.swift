@@ -9,24 +9,25 @@ import MapsIndoors
  
  This is an example of enabling and disabling location grouping on the map as well as providing custom cluster tapping behavior and custom cluster images.
  
- Start by creating a  class that conforms to the `MPMapControlDelegate` protocol and the `MPCustomClusterIcon` protocol
+ Start by creating a  class that conforms to the  protocol `MPCustomClusterIcon`
  ***/
-class ClusteringController: BaseMapController, MPMapControlDelegate, MPCustomClusterIcon {
-    let clusteringButton = UIButton.init()
-    let iconToggleButton = UIButton.init()
+class ClusteringController: BaseMapController, MPCustomClusterIcon {
+    private let collisionButton = UIButton.init()
+    private let clusteringButton = UIButton.init()
+    private let iconToggleButton = UIButton.init()
     
     override func setupController() async {
-        mapControl?.delegate = self
         mapControl?.customClusterIcon = self
         
         /***
-         Setup buttons that enables/disables the location grouping / clustering mechanism and the icon from default <=> custom
+         Setup buttons that enables/disables the location collision/overlapping, grouping/clustering mechanism and the icon from default <=> custom
          ***/
-        setupButton(button: iconToggleButton, title: "Cluster Custom Icon", action: #selector(toggleIcon))
-        setupButton(button: clusteringButton, title: "Clustering disabled", action: #selector(toggleClustering))
+        setupIconToggleButton()
+        setupClusteringButton()
+        setupCollisionButton()
         
         // Create a stack view
-        let stackView = UIStackView(arrangedSubviews: [clusteringButton, iconToggleButton])
+        let stackView = UIStackView(arrangedSubviews: [collisionButton, clusteringButton, iconToggleButton])
         stackView.axis = .vertical
         stackView.distribution = .fillEqually
         stackView.spacing = 10
@@ -38,10 +39,9 @@ class ClusteringController: BaseMapController, MPMapControlDelegate, MPCustomClu
             stackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 10),
             stackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -60),
         ])
-        
     }
     
-    func setupButton(button: UIButton, title: String, action: Selector) {
+   private func setupButton(button: UIButton, title: String, action: Selector) {
         button.setTitle(title, for: .normal)
         button.addTarget(self, action: action, for: .touchUpInside)
         button.backgroundColor = UIColor(red: 35/255, green: 85/255, blue: 84/255, alpha: 0.7)
@@ -49,6 +49,49 @@ class ClusteringController: BaseMapController, MPMapControlDelegate, MPCustomClu
         button.layer.cornerRadius = 8
         button.clipsToBounds = true
         button.translatesAutoresizingMaskIntoConstraints = false // Enable Auto Layout for the button
+    }
+    
+    private func setupIconToggleButton() {
+        setupButton(button: iconToggleButton, title: "Custom Cluster Icon", action: #selector(toggleIcon))
+    }
+    
+    private func setupClusteringButton() {
+        let clusteringEnabled = MPMapsIndoors.shared.solution?.config.enableClustering ?? false
+        let title = "Clustering \(clusteringEnabled ? "enabled" : "disabled")"
+        setupButton(button: clusteringButton, title: title, action: #selector(toggleClustering))
+    }
+    
+    private func setupCollisionButton() {
+        let collisionHandling = MPMapsIndoors.shared.solution?.config.collisionHandling
+        let title = "Collision: \(collisionHandling?.description ?? "unknown")"
+        setupButton(button: collisionButton, title: title, action: #selector(changeCollision))
+    }
+    
+    /***
+     Define an objective-c method `changeCollision` that will receive events from your button:
+     * Check current state
+     * Swap state
+     * Make button reflect the state
+     * Force re-render map
+     ***/
+    @objc func changeCollision() {
+        guard let currentHandling = MPMapsIndoors.shared.solution?.config.collisionHandling else { return }
+        
+        let nextHandling: MPCollisionHandling
+        switch currentHandling {
+        case .allowOverLap:
+            nextHandling = .removeIconAndLabel
+        case .removeIconAndLabel:
+            nextHandling = .removeIconFirst
+        case .removeIconFirst:
+            nextHandling = .removeLabelFirst
+        case .removeLabelFirst:
+            nextHandling = .allowOverLap
+        }
+        
+        MPMapsIndoors.shared.solution?.config.collisionHandling = nextHandling
+        collisionButton.setTitle("Collision: \(nextHandling.description)", for: .normal)
+        mapControl?.refresh()
     }
     
     /***
@@ -59,19 +102,12 @@ class ClusteringController: BaseMapController, MPMapControlDelegate, MPCustomClu
      * Force re-render map
      ***/
     @objc func toggleClustering() {
-        if (MPMapsIndoors.shared.solution?.config.enableClustering) != nil {
-            MPMapsIndoors.shared.solution?.config.enableClustering.toggle()
-            clusteringButton.isSelected.toggle()
-            
-            // Update button title
-            if clusteringButton.isSelected {
-                clusteringButton.setTitle("Clustering enabled", for: .normal)
-            } else {
-                clusteringButton.setTitle("Clustering disabled", for: .normal)
-            }
-            
-            mapControl?.refresh()
-        }
+        guard let clusteringEnabled = MPMapsIndoors.shared.solution?.config.enableClustering else { return }
+        
+        let newStatus = !clusteringEnabled
+        MPMapsIndoors.shared.solution?.config.enableClustering = newStatus
+        clusteringButton.setTitle("Clustering \(newStatus ? "enabled" : "disabled")", for: .normal)
+        mapControl?.refresh()
     }
     
     /***
@@ -83,16 +119,14 @@ class ClusteringController: BaseMapController, MPMapControlDelegate, MPCustomClu
      ***/
     @objc func toggleIcon() {
         iconToggleButton.isSelected.toggle()
-        
         // Update button title
         if iconToggleButton.isSelected {
-            iconToggleButton.setTitle("Cluster Default Icon", for: .normal)
+            iconToggleButton.setTitle("Default Cluster Icon", for: .normal)
             mapControl?.customClusterIcon = nil // Use default icon
         } else {
-            iconToggleButton.setTitle("Cluster Custom Icon", for: .normal)
+            iconToggleButton.setTitle("Custom Cluster Icon", for: .normal)
             mapControl?.customClusterIcon = self // Use custom icon
         }
-        
         mapControl?.refresh()
     }
     
@@ -125,12 +159,29 @@ class ClusteringController: BaseMapController, MPMapControlDelegate, MPCustomClu
     }
     
     override func adjustUI(forMenu: Bool) {
+        collisionButton.isHidden = forMenu
         clusteringButton.isHidden = forMenu
         iconToggleButton.isHidden = forMenu
     }
     
     override func updateForBuildingChange() {
+        collisionButton.isHidden = false
         clusteringButton.isHidden = false
         iconToggleButton.isHidden = false
+    }
+}
+
+fileprivate extension MPCollisionHandling {
+    var description: String {
+        switch self {
+        case .allowOverLap:
+            return "allowOverLap"
+        case .removeLabelFirst:
+            return "removeLabelFirst"
+        case .removeIconFirst:
+            return "removeIconFirst"
+        case .removeIconAndLabel:
+            return "removeIconAndLabel"
+        }
     }
 }

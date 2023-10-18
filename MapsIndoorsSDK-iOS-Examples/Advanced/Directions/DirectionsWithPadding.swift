@@ -107,10 +107,10 @@ class DirectionsWithPadding: BaseMapController {
                 } else {
                     isFirstRun = true
                     directionsRenderer?.fitMode = .northAligned
+                    orientationButtonState = .state2
                 }
                 
                 directionsRenderer?.animate(duration: 5)
-                setGoogleCamera(route!) // TODO: use this while awaiting SDK route padding fix for Google Maps
                 
             } catch {
                 print("Error getting directions: \(error.localizedDescription)")
@@ -186,23 +186,5 @@ class DirectionsWithPadding: BaseMapController {
     override func updateForBuildingChange() {
         paddingButton.isHidden = false
         orientationButton.isHidden = false
-    }
-    
-    private func setGoogleCamera(_ route: MPRoute) {
-        if let googleMapProvider = MapEngine.selectedMapProvider as? GoogleMapSpecific {
-            if let firstLeg = route.legs.first {
-                if let lastLeg = route.legs.last {
-                    let startingPoint = CLLocationCoordinate2D(latitude: CLLocationDegrees(firstLeg.start_location.lat), longitude: CLLocationDegrees(firstLeg.start_location.lng))
-                    let endingPoint = CLLocationCoordinate2D(latitude: CLLocationDegrees(lastLeg.end_location.lat), longitude: CLLocationDegrees(lastLeg.end_location.lng))
-                    
-                    // Create bounds using the starting and ending points
-                    let bounds = GMSCoordinateBounds(coordinate: startingPoint, coordinate: endingPoint)
-                    
-                    // Adjust the camera to fit the bounds with some padding
-                    let cameraUpdate = GMSCameraUpdate.fit(bounds, withPadding: 100.0) // Adjust the padding as needed
-                    googleMapProvider.setCamera(update: cameraUpdate)
-                }
-            }
-        }
     }
 }

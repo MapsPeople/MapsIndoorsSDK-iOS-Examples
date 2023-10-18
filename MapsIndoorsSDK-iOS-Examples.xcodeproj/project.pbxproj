@@ -43,7 +43,6 @@
 		4DB9BF162A9770BB00C4D7FE /* MapEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9BF152A9770BB00C4D7FE /* MapEngine.swift */; };
 		4DB9BF182A9771A800C4D7FE /* GenericMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9BF172A9771A800C4D7FE /* GenericMap.swift */; };
 		4DB9BF1A2A97736000C4D7FE /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9BF192A97736000C4D7FE /* APIKeys.swift */; };
-		4DB9BF1C2A97739600C4D7FE /* APIKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4DB9BF1B2A97739600C4D7FE /* APIKeys.plist */; };
 		4DB9BF1E2A97748700C4D7FE /* GoogleMapsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9BF1D2A97748700C4D7FE /* GoogleMapsWrapper.swift */; };
 		4DB9BF202A9774AF00C4D7FE /* MapboxWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9BF1F2A9774AF00C4D7FE /* MapboxWrapper.swift */; };
 		4DB9BF222A97758400C4D7FE /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9BF212A97758400C4D7FE /* Memory.swift */; };
@@ -89,7 +88,6 @@
 		4DB9BF152A9770BB00C4D7FE /* MapEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapEngine.swift; sourceTree = "<group>"; };
 		4DB9BF172A9771A800C4D7FE /* GenericMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericMap.swift; sourceTree = "<group>"; };
 		4DB9BF192A97736000C4D7FE /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
-		4DB9BF1B2A97739600C4D7FE /* APIKeys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = APIKeys.plist; sourceTree = "<group>"; };
 		4DB9BF1D2A97748700C4D7FE /* GoogleMapsWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsWrapper.swift; sourceTree = "<group>"; };
 		4DB9BF1F2A9774AF00C4D7FE /* MapboxWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapboxWrapper.swift; sourceTree = "<group>"; };
 		4DB9BF212A97758400C4D7FE /* Memory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memory.swift; sourceTree = "<group>"; };
@@ -240,7 +238,6 @@
 				4DB9BF052A9769BF00C4D7FE /* LaunchScreen.storyboard */,
 				4DB9BF082A9769BF00C4D7FE /* Info.plist */,
 				4DB9BF192A97736000C4D7FE /* APIKeys.swift */,
-				4DB9BF1B2A97739600C4D7FE /* APIKeys.plist */,
 				4DB9BF262A97765100C4D7FE /* BaseMapController.swift */,
 				4DB9BF232A9775F700C4D7FE /* Getting Started */,
 				4D1F963A2A9C96DA0034CA87 /* Basic */,
@@ -354,7 +351,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DB9BF072A9769BF00C4D7FE /* LaunchScreen.storyboard in Resources */,
-				4DB9BF1C2A97739600C4D7FE /* APIKeys.plist in Resources */,
 				4DB9BF042A9769BF00C4D7FE /* Assets.xcassets in Resources */,
 				4DB9BF022A9769BE00C4D7FE /* Main.storyboard in Resources */,
 			);

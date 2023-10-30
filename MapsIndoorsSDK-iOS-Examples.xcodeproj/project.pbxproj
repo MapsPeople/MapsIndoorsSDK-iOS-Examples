@@ -48,6 +48,7 @@
 		4DB9BF222A97758400C4D7FE /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9BF212A97758400C4D7FE /* Memory.swift */; };
 		4DB9BF252A97761F00C4D7FE /* DisplayMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9BF242A97761F00C4D7FE /* DisplayMap.swift */; };
 		4DB9BF272A97765100C4D7FE /* BaseMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9BF262A97765100C4D7FE /* BaseMapController.swift */; };
+		4DD4B0A82AEFD76C00F350D3 /* SolutionSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD4B0A72AEFD76C00F350D3 /* SolutionSwitch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +94,7 @@
 		4DB9BF212A97758400C4D7FE /* Memory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memory.swift; sourceTree = "<group>"; };
 		4DB9BF242A97761F00C4D7FE /* DisplayMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayMap.swift; sourceTree = "<group>"; };
 		4DB9BF262A97765100C4D7FE /* BaseMapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMapController.swift; sourceTree = "<group>"; };
+		4DD4B0A72AEFD76C00F350D3 /* SolutionSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolutionSwitch.swift; sourceTree = "<group>"; };
 		85CFFC50B8649D6E6055F47F /* Pods-MapsIndoorsSDK-iOS-Examples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapsIndoorsSDK-iOS-Examples.release.xcconfig"; path = "Target Support Files/Pods-MapsIndoorsSDK-iOS-Examples/Pods-MapsIndoorsSDK-iOS-Examples.release.xcconfig"; sourceTree = "<group>"; };
 		A80925BE74AAD8A03986BE1A /* Pods_MapsIndoorsSDK_iOS_Examples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapsIndoorsSDK_iOS_Examples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC0C3E97BFAF5A9EDEA2A24E /* Pods-MapsIndoorsSDK-iOS-Examples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapsIndoorsSDK-iOS-Examples.debug.xcconfig"; path = "Target Support Files/Pods-MapsIndoorsSDK-iOS-Examples/Pods-MapsIndoorsSDK-iOS-Examples.debug.xcconfig"; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				4D1F965E2A9DF26F0034CA87 /* ClusteringController.swift */,
 				4D1F96622A9DF44B0034CA87 /* CustomFloorSelectorController.swift */,
 				4D1F96642A9DF4B80034CA87 /* Dataset Manager */,
+				4DD4B0A72AEFD76C00F350D3 /* SolutionSwitch.swift */,
 			);
 			path = Advanced;
 			sourceTree = "<group>";
@@ -434,6 +437,7 @@
 				4DB9BF222A97758400C4D7FE /* Memory.swift in Sources */,
 				4D46522C2AA71216009AD4D6 /* DemoTableViewDataSource.swift in Sources */,
 				4DB9BEFB2A9769BE00C4D7FE /* AppDelegate.swift in Sources */,
+				4DD4B0A82AEFD76C00F350D3 /* SolutionSwitch.swift in Sources */,
 				4D1F96492A9DDA5A0034CA87 /* MyPositionProvider.swift in Sources */,
 				4DB9BEFD2A9769BE00C4D7FE /* SceneDelegate.swift in Sources */,
 				4D1F965B2A9DEF460034CA87 /* ToggleLocationsVisibilityController.swift in Sources */,

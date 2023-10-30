@@ -7,7 +7,7 @@ PODS:
   - MapboxCommon (23.8.3)
   - MapboxCoreMaps (10.16.1):
     - MapboxCommon (~> 23.8)
-  - MapboxDirections (2.10.0):
+  - MapboxDirections (2.11.1):
     - Polyline (~> 5.0)
     - Turf (~> 2.6.1)
   - MapboxMaps (10.16.1):
@@ -16,22 +16,22 @@ PODS:
     - MapboxMobileEvents (= 1.0.10)
     - Turf (~> 2.0)
   - MapboxMobileEvents (1.0.10)
-  - MapsIndoors (4.2.6)
-  - MapsIndoorsCore (4.2.6):
-    - MapsIndoors (= 4.2.6)
-  - MapsIndoorsGoogleMaps (4.2.6):
+  - MapsIndoors (4.2.7)
+  - MapsIndoorsCore (4.2.7):
+    - MapsIndoors (= 4.2.7)
+  - MapsIndoorsGoogleMaps (4.2.7):
     - GoogleMaps (= 7.4.0)
-    - MapsIndoorsCore (= 4.2.6)
-  - MapsIndoorsMapbox (4.2.6):
-    - MapboxDirections (= 2.10.0)
+    - MapsIndoorsCore (= 4.2.7)
+  - MapsIndoorsMapbox (4.2.7):
+    - MapboxDirections (= 2.11.1)
     - MapboxMaps (= 10.16.1)
-    - MapsIndoorsCore (= 4.2.6)
+    - MapsIndoorsCore (= 4.2.7)
   - Polyline (5.1.0)
   - Turf (2.6.1)
 
 DEPENDENCIES:
-  - MapsIndoorsGoogleMaps (= 4.2.6)
-  - MapsIndoorsMapbox (= 4.2.6)
+  - MapsIndoorsGoogleMaps (= 4.2.7)
+  - MapsIndoorsMapbox (= 4.2.7)
 
 SPEC REPOS:
   trunk:
@@ -52,16 +52,16 @@ SPEC CHECKSUMS:
   GoogleMaps: 032f676450ba0779bd8ce16840690915f84e57ac
   MapboxCommon: b2c348867dfed7d7a23545e6c2024d712bfda10f
   MapboxCoreMaps: c66f482b5ea983cf873122853c4ee94c159bec43
-  MapboxDirections: a620d78a54312c392323ba211df8ae7dd9a28ab4
+  MapboxDirections: 31d61b8369d5dde6f6828f72905ab9a7e054cd2c
   MapboxMaps: fdbe05e3899abd24f31a7f91789586e44e57f7fc
   MapboxMobileEvents: de50b3a4de180dd129c326e09cd12c8adaaa46d6
-  MapsIndoors: 9b2765c170f0c577cecde71ef72ab29e4d1491ac
-  MapsIndoorsCore: 6073134c65bea1d6317637f2beb21bf81505bbe1
-  MapsIndoorsGoogleMaps: d07b62ecff5189ecb05098bbcb50fa862989e500
-  MapsIndoorsMapbox: 81986386a3266d2c2be5fae98ccce83d0a8cfefe
+  MapsIndoors: e9b01629876652d2307ccf809a8f9033ec5bfad9
+  MapsIndoorsCore: 2619fe58ff325b2f673487171955a0f2a58dd3c6
+  MapsIndoorsGoogleMaps: cd695cb0604010e590b6a3afad21b20b7d47d260
+  MapsIndoorsMapbox: b542a678a71ad5b1e06ad60b7596bc3fa9b9773c
   Polyline: 2a1f29f87f8d9b7de868940f4f76deb8c678a5b1
   Turf: 469ce2c3d22e5e8e4818d5a3b254699a5c89efa4
 
-PODFILE CHECKSUM: 4de47ccdc80bf748416fe97678585e31e09acb05
+PODFILE CHECKSUM: b288dac64f3251c307de89b3a43841280a8c58e6
 
 COCOAPODS: 1.13.0

@@ -191,6 +191,8 @@ class DemoSelectorViewController: UITableViewController {
         Demo(controllerClass: ClusteringController.self, title: "Clustering and Collisions", description: "Enable/Disable Clustering and Collisions at runtime and provide a custom icon for cluster", sectionTitle: "Advanced"),
         Demo(controllerClass: CustomFloorSelectorController.self, title: "Custom Floor Selector", description: "Provide your own custom floor selector, reload controller if no custom floor selector is visible", sectionTitle: "Advanced"),
         Demo(controllerClass: DatasetMapController.self, title: "Dataset/Cache", description: "Demo on MapsIndoors cache", sectionTitle: "Advanced"),
+        Demo(controllerClass: IndoorPositioning.self, title: "Indoor Positioning", description: "Indoor positioning/my location/blue dot", sectionTitle: "Advanced"),
+        Demo(controllerClass: SolutionSwitchController.self, title: "Solution Switch", description: "Switch a MapsIndoors solution at runtime", sectionTitle: "Advanced"),
     ]
 }
 

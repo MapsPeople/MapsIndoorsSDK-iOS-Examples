@@ -1,17 +1,15 @@
-import Foundation
 import MapboxMaps
 import MapsIndoors
 import MapsIndoorsMapbox
+import UIKit
 
-@objcMembers public class MapboxWrapper : NSObject, GenericMap {
-
-    private let map : MapboxMap
-    private let mapView : MapView
+@objcMembers public class MapboxWrapper: NSObject, GenericMap {
+    private var map: MapboxMap { mapView.mapboxMap }
+    private let mapView: MapView
 
     public required init(MBmapView: MapView) {
-        self.mapView = MBmapView
-        self.mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        self.map = self.mapView.mapboxMap
+        mapView = MBmapView
+        mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     }
 
     public func setup() {
@@ -21,31 +19,31 @@ import MapsIndoorsMapbox
     var delegate: GenericMapDelegate?
 
     public var view: UIView {
-        return mapView
+        mapView
     }
 
     public var padding: UIEdgeInsets {
-        get { return mapView.cameraState.padding }
+        get { mapView.mapboxMap.cameraState.padding }
         set { map.setCamera(to: CameraOptions(padding: newValue)) }
     }
 
     public var target: CLLocationCoordinate2D {
-        get { return mapView.cameraState.center }
+        get { mapView.mapboxMap.cameraState.center }
         set { map.setCamera(to: CameraOptions(center: newValue)) }
     }
 
     public var bearing: Double {
-        get { return mapView.cameraState.bearing }
+        get { mapView.mapboxMap.cameraState.bearing }
         set { map.setCamera(to: CameraOptions(bearing: newValue)) }
     }
 
     public var tilt: Double {
-        get { return mapView.cameraState.pitch }
+        get { mapView.mapboxMap.cameraState.pitch }
         set { map.setCamera(to: CameraOptions(pitch: newValue)) }
     }
 
     public var zoom: Double {
-        get { return mapView.cameraState.zoom }
+        get { mapView.mapboxMap.cameraState.zoom }
         set { map.setCamera(to: CameraOptions(zoom: newValue)) }
     }
 
@@ -56,37 +54,38 @@ import MapsIndoorsMapbox
         let nearRight = map.coordinate(for: view.frame.origin.applying(CGAffineTransform(translationX: view.frame.width, y: view.frame.height)))
         return MPGeoRegion(nearLeft: nearLeft, farLeft: farLeft, farRight: farRight, nearRight: nearRight)
     }
-    
+
     func animate(bounds: MPGeoBounds) {
         let mapBounds = CoordinateBounds(southwest: CLLocationCoordinate2D(latitude: bounds.southWest.latitude, longitude: bounds.southWest.longitude),
-                                      northeast: CLLocationCoordinate2D(latitude: bounds.northEast.latitude, longitude: bounds.northEast.longitude))
+                                         northeast: CLLocationCoordinate2D(latitude: bounds.northEast.latitude, longitude: bounds.northEast.longitude))
         try? mapView.mapboxMap.setCameraBounds(with: CameraBoundsOptions(bounds: mapBounds))
-        
-        let camera = mapView.mapboxMap.camera(for: mapBounds, padding: .zero, bearing: 0, pitch: 0)
-        
-        mapView.mapboxMap.setCamera(to: camera)
+        let coordinates = [CLLocationCoordinate2D(latitude: bounds.southWest.latitude, longitude: bounds.southWest.longitude),
+                           CLLocationCoordinate2D(latitude: bounds.northEast.latitude, longitude: bounds.northEast.longitude)]
+
+        if let camera = try? mapView.mapboxMap.camera(for: coordinates, camera: CameraOptions(), coordinatesPadding: .zero, maxZoom: 99, offset: .zero) {
+            mapView.mapboxMap.setCamera(to: camera)
+        }
     }
 
     func setCamera(coordinates: CLLocationCoordinate2D, zoom: Float) {
-        self.mapView.camera.fly(to: CameraOptions(center: coordinates, padding: UIEdgeInsets(), anchor: nil, zoom: CGFloat(zoom), bearing: CLLocationDirection(0), pitch: CGFloat(0)), duration: TimeInterval(0.5)) { _ in }
+        mapView.camera.fly(to: CameraOptions(center: coordinates, padding: UIEdgeInsets(), anchor: nil, zoom: CGFloat(zoom), bearing: CLLocationDirection(0), pitch: CGFloat(0)), duration: TimeInterval(0.5)) { _ in }
     }
-    
+
     public func move(target: CLLocationCoordinate2D, zoom: Double, bearing: Double, tilt: Double) {
         mapView.camera.fly(to: CameraOptions(center: target, zoom: zoom, bearing: bearing, pitch: tilt))
     }
 
-    public func fit(northEast: CLLocationCoordinate2D, southWest: CLLocationCoordinate2D, padding: Float) {
-        do {
-            let pos = mapView.mapboxMap.camera(for: CoordinateBounds(southwest: southWest, northeast: northEast), padding: UIEdgeInsets(), bearing: 0.0, pitch: 0.0)
+    public func fit(northEast: CLLocationCoordinate2D, southWest: CLLocationCoordinate2D, padding _: Float) {
+        let coordinates = [southWest, northEast]
+        if let pos = try? mapView.mapboxMap.camera(for: coordinates, camera: CameraOptions(), coordinatesPadding: .zero, maxZoom: 99, offset: .zero) {
             mapView.mapboxMap.setCamera(to: pos)
         }
     }
 
     public func fit(northEast: CLLocationCoordinate2D, southWest: CLLocationCoordinate2D, edgeInsets: UIEdgeInsets) {
-        do {
-            let pos = mapView.mapboxMap.camera(for: CoordinateBounds(southwest: southWest, northeast: northEast), padding: edgeInsets, bearing: 0.0, pitch: 0.0)
+        let coordinates = [southWest, northEast]
+        if let pos = try? mapView.mapboxMap.camera(for: coordinates, camera: CameraOptions(), coordinatesPadding: edgeInsets, maxZoom: 99, offset: .zero) {
             mapView.mapboxMap.setCamera(to: pos)
         }
     }
-
 }

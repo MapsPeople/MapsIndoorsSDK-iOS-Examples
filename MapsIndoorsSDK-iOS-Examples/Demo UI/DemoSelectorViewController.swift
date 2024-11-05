@@ -109,7 +109,7 @@ class DemoSelectorViewController: UITableViewController {
             GMSServices.provideAPIKey(APIKeys.googleMapsAPIKey)
             DemoSelectorViewController.isGoogleMapsInitialized = true
         }
-        self.googleMap = GMSMapView(frame: CGRect.zero)
+        self.googleMap = GMSMapView()
         MapEngine.selectedMapView = googleMap
         MapEngine.APIKey = APIKey!
         MapEngine.selectedMapProvider = GoogleMapsWrapper(GMMapView: googleMap!)
@@ -118,17 +118,17 @@ class DemoSelectorViewController: UITableViewController {
     }
     
     private func setupMapBox() {
-        let myResourceOptions = ResourceOptions(accessToken: APIKeys.mapboxAPIKey)
         let styleURI: StyleURI = isDarkModeEnabled() ? .dark : .light
-        let myMapInitOptions = MapInitOptions(resourceOptions: myResourceOptions, styleURI: styleURI)
-        self.mapView = MapView(frame: view.bounds, mapInitOptions: myMapInitOptions)
+        let mapInitOptions = MapInitOptions(mapOptions: MapOptions(), styleURI: styleURI)
+        mapView = MapView(frame: view.bounds, mapInitOptions: mapInitOptions)
+
         MapEngine.selectedMapView = mapView!
         MapEngine.APIKey = APIKey!
         MapEngine.selectedMapProvider = MapboxWrapper(MBmapView: mapView!)
         MapEngine.selectedMapConfig = MPMapConfig(mapBoxView: mapView!, accessToken: "---")
         print("MapBox is selected")
     }
-    
+
     private func isDarkModeEnabled() -> Bool {
         return self.traitCollection.userInterfaceStyle == .dark
     }

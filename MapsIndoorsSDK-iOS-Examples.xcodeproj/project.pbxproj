@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		19DC72AC5D095A9FF5C8C2F9 /* Pods_MapsIndoorsSDK_iOS_Examples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A80925BE74AAD8A03986BE1A /* Pods_MapsIndoorsSDK_iOS_Examples.framework */; };
 		4D1F96342A9C8EEC0034CA87 /* SearchLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F96332A9C8EEC0034CA87 /* SearchLocation.swift */; };
 		4D1F96362A9C8F090034CA87 /* BasicDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F96352A9C8F090034CA87 /* BasicDirection.swift */; };
 		4D1F96382A9C8F2E0034CA87 /* BasicLiveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F96372A9C8F2E0034CA87 /* BasicLiveData.swift */; };
@@ -49,6 +48,8 @@
 		4DB9BF252A97761F00C4D7FE /* DisplayMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9BF242A97761F00C4D7FE /* DisplayMap.swift */; };
 		4DB9BF272A97765100C4D7FE /* BaseMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9BF262A97765100C4D7FE /* BaseMapController.swift */; };
 		4DD4B0A82AEFD76C00F350D3 /* SolutionSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD4B0A72AEFD76C00F350D3 /* SolutionSwitch.swift */; };
+		BD8D38B42CDA3AB60045293A /* MapsIndoorsMapbox in Frameworks */ = {isa = PBXBuildFile; productRef = BD8D38B32CDA3AB60045293A /* MapsIndoorsMapbox */; };
+		BD8D38B72CDA3AC90045293A /* MapsIndoorsGoogleMaps in Frameworks */ = {isa = PBXBuildFile; productRef = BD8D38B62CDA3AC90045293A /* MapsIndoorsGoogleMaps */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,9 +96,6 @@
 		4DB9BF242A97761F00C4D7FE /* DisplayMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayMap.swift; sourceTree = "<group>"; };
 		4DB9BF262A97765100C4D7FE /* BaseMapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMapController.swift; sourceTree = "<group>"; };
 		4DD4B0A72AEFD76C00F350D3 /* SolutionSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolutionSwitch.swift; sourceTree = "<group>"; };
-		85CFFC50B8649D6E6055F47F /* Pods-MapsIndoorsSDK-iOS-Examples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapsIndoorsSDK-iOS-Examples.release.xcconfig"; path = "Target Support Files/Pods-MapsIndoorsSDK-iOS-Examples/Pods-MapsIndoorsSDK-iOS-Examples.release.xcconfig"; sourceTree = "<group>"; };
-		A80925BE74AAD8A03986BE1A /* Pods_MapsIndoorsSDK_iOS_Examples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapsIndoorsSDK_iOS_Examples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC0C3E97BFAF5A9EDEA2A24E /* Pods-MapsIndoorsSDK-iOS-Examples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapsIndoorsSDK-iOS-Examples.debug.xcconfig"; path = "Target Support Files/Pods-MapsIndoorsSDK-iOS-Examples/Pods-MapsIndoorsSDK-iOS-Examples.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +103,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19DC72AC5D095A9FF5C8C2F9 /* Pods_MapsIndoorsSDK_iOS_Examples.framework in Frameworks */,
+				BD8D38B72CDA3AC90045293A /* MapsIndoorsGoogleMaps in Frameworks */,
+				BD8D38B42CDA3AB60045293A /* MapsIndoorsMapbox in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,8 +215,6 @@
 			children = (
 				4DB9BEF92A9769BE00C4D7FE /* MapsIndoorsSDK-iOS-Examples */,
 				4DB9BEF82A9769BE00C4D7FE /* Products */,
-				FECDE2D606E0843158EAD7E9 /* Pods */,
-				B372EE05A608CD17591EF4CB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -275,23 +272,6 @@
 			path = "Getting Started";
 			sourceTree = "<group>";
 		};
-		B372EE05A608CD17591EF4CB /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A80925BE74AAD8A03986BE1A /* Pods_MapsIndoorsSDK_iOS_Examples.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		FECDE2D606E0843158EAD7E9 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				CC0C3E97BFAF5A9EDEA2A24E /* Pods-MapsIndoorsSDK-iOS-Examples.debug.xcconfig */,
-				85CFFC50B8649D6E6055F47F /* Pods-MapsIndoorsSDK-iOS-Examples.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -299,12 +279,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4DB9BF0B2A9769BF00C4D7FE /* Build configuration list for PBXNativeTarget "MapsIndoorsSDK-iOS-Examples" */;
 			buildPhases = (
-				14234191E2205ED3512DC3C8 /* [CP] Check Pods Manifest.lock */,
 				4DB9BEF32A9769BE00C4D7FE /* Sources */,
 				4DB9BEF42A9769BE00C4D7FE /* Frameworks */,
 				4DB9BEF52A9769BE00C4D7FE /* Resources */,
-				15D4FF715C8547F47876C84F /* [CP] Embed Pods Frameworks */,
-				666C3D4B8AEF9991B7ABB1D5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -339,6 +316,10 @@
 				Base,
 			);
 			mainGroup = 4DB9BEEE2A9769BE00C4D7FE;
+			packageReferences = (
+				BD8D38B22CDA3AB60045293A /* XCRemoteSwiftPackageReference "mapsindoors-mapbox-ios" */,
+				BD8D38B52CDA3AC90045293A /* XCRemoteSwiftPackageReference "mapsindoors-googlemaps-ios" */,
+			);
 			productRefGroup = 4DB9BEF82A9769BE00C4D7FE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -360,65 +341,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		14234191E2205ED3512DC3C8 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MapsIndoorsSDK-iOS-Examples-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		15D4FF715C8547F47876C84F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MapsIndoorsSDK-iOS-Examples/Pods-MapsIndoorsSDK-iOS-Examples-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MapsIndoorsSDK-iOS-Examples/Pods-MapsIndoorsSDK-iOS-Examples-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MapsIndoorsSDK-iOS-Examples/Pods-MapsIndoorsSDK-iOS-Examples-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		666C3D4B8AEF9991B7ABB1D5 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MapsIndoorsSDK-iOS-Examples/Pods-MapsIndoorsSDK-iOS-Examples-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MapsIndoorsSDK-iOS-Examples/Pods-MapsIndoorsSDK-iOS-Examples-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MapsIndoorsSDK-iOS-Examples/Pods-MapsIndoorsSDK-iOS-Examples-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4DB9BEF32A9769BE00C4D7FE /* Sources */ = {
@@ -604,7 +526,6 @@
 		};
 		4DB9BF0C2A9769BF00C4D7FE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CC0C3E97BFAF5A9EDEA2A24E /* Pods-MapsIndoorsSDK-iOS-Examples.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -618,6 +539,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -633,7 +555,6 @@
 		};
 		4DB9BF0D2A9769BF00C4D7FE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 85CFFC50B8649D6E6055F47F /* Pods-MapsIndoorsSDK-iOS-Examples.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -647,6 +568,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -682,6 +604,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BD8D38B22CDA3AB60045293A /* XCRemoteSwiftPackageReference "mapsindoors-mapbox-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MapsPeople/mapsindoors-mapbox-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.6.2;
+			};
+		};
+		BD8D38B52CDA3AC90045293A /* XCRemoteSwiftPackageReference "mapsindoors-googlemaps-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MapsPeople/mapsindoors-googlemaps-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.6.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BD8D38B32CDA3AB60045293A /* MapsIndoorsMapbox */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD8D38B22CDA3AB60045293A /* XCRemoteSwiftPackageReference "mapsindoors-mapbox-ios" */;
+			productName = MapsIndoorsMapbox;
+		};
+		BD8D38B62CDA3AC90045293A /* MapsIndoorsGoogleMaps */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD8D38B52CDA3AC90045293A /* XCRemoteSwiftPackageReference "mapsindoors-googlemaps-ios" */;
+			productName = MapsIndoorsGoogleMaps;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4DB9BEEF2A9769BE00C4D7FE /* Project object */;
 }

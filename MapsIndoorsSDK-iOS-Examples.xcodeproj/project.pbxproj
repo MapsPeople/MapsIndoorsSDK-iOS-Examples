@@ -48,6 +48,7 @@
 		4DB9BF252A97761F00C4D7FE /* DisplayMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9BF242A97761F00C4D7FE /* DisplayMap.swift */; };
 		4DB9BF272A97765100C4D7FE /* BaseMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9BF262A97765100C4D7FE /* BaseMapController.swift */; };
 		4DD4B0A82AEFD76C00F350D3 /* SolutionSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD4B0A72AEFD76C00F350D3 /* SolutionSwitch.swift */; };
+		BD3F0B402D9D72440019FCB4 /* SearchFilterLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3F0B3F2D9D72440019FCB4 /* SearchFilterLocation.swift */; };
 		BD8D38B42CDA3AB60045293A /* MapsIndoorsMapbox in Frameworks */ = {isa = PBXBuildFile; productRef = BD8D38B32CDA3AB60045293A /* MapsIndoorsMapbox */; };
 		BD8D38B72CDA3AC90045293A /* MapsIndoorsGoogleMaps in Frameworks */ = {isa = PBXBuildFile; productRef = BD8D38B62CDA3AC90045293A /* MapsIndoorsGoogleMaps */; };
 /* End PBXBuildFile section */
@@ -96,6 +97,7 @@
 		4DB9BF242A97761F00C4D7FE /* DisplayMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayMap.swift; sourceTree = "<group>"; };
 		4DB9BF262A97765100C4D7FE /* BaseMapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMapController.swift; sourceTree = "<group>"; };
 		4DD4B0A72AEFD76C00F350D3 /* SolutionSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolutionSwitch.swift; sourceTree = "<group>"; };
+		BD3F0B3F2D9D72440019FCB4 /* SearchFilterLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFilterLocation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 		4D1F963B2A9C96F10034CA87 /* Intermediate */ = {
 			isa = PBXGroup;
 			children = (
+				BD3F0B3F2D9D72440019FCB4 /* SearchFilterLocation.swift */,
 				4D1F96472A9DDA3A0034CA87 /* Show My Location */,
 				4D1F96502A9DE58C0034CA87 /* UseDelegatesController.swift */,
 				4D1F96522A9DE9EF0034CA87 /* CustomInfoWindowController.swift */,
@@ -354,6 +357,7 @@
 				4D1F96532A9DE9EF0034CA87 /* CustomInfoWindowController.swift in Sources */,
 				4DB9BF122A976F3900C4D7FE /* SettingsController.swift in Sources */,
 				4D1F964B2A9DDA860034CA87 /* ShowMyLocationController.swift in Sources */,
+				BD3F0B402D9D72440019FCB4 /* SearchFilterLocation.swift in Sources */,
 				4DB9BF1E2A97748700C4D7FE /* GoogleMapsWrapper.swift in Sources */,
 				4DB9BF202A9774AF00C4D7FE /* MapboxWrapper.swift in Sources */,
 				4DB9BF222A97758400C4D7FE /* Memory.swift in Sources */,

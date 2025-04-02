@@ -96,9 +96,9 @@ class DemoSelectorViewController: UITableViewController {
     private func setupMapProvider(index: Int) {
         switch index {
         case 0:
-            setupGoogleMaps()
-        case 1:
             setupMapBox()
+        case 1:
+            setupGoogleMaps()
         default:
             print("Invalid map provider index")
         }
@@ -178,6 +178,7 @@ class DemoSelectorViewController: UITableViewController {
         Demo(controllerClass: MapPadding.self, title: "Map Padding", description: "Adjust Map Padding", sectionTitle: "Basic"),
         Demo(controllerClass: LocationDetailsController.self, title: "Location Details", description: "This demo shows the details of a location", sectionTitle: "Basic"),
         // Intermediate
+        Demo(controllerClass: SearchFilterLocation.self, title: "Search and Filter Locations", description: "Use Filter to narrow your search results further", sectionTitle: "Intermediate"),
         Demo(controllerClass: ShowMyLocationController.self, title: "Show My Location", description: "Mock a position provider and show user location (blue dot) and set it's Display Rule to change it's default icon", sectionTitle: "Intermediate"),
         Demo(controllerClass: UseDelegatesController.self, title: "Custom Map Control Delegate", description: "Implement your own custom Map Control Delegate", sectionTitle: "Intermediate"),
         Demo(controllerClass: CustomInfoWindowController.self, title: "Custom Info Window", description: "Implement your own custom Info Window", sectionTitle: "Intermediate"),

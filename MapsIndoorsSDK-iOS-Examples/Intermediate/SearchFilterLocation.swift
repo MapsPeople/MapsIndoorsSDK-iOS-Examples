@@ -3,10 +3,40 @@ import MapsIndoors
 import MapsIndoorsCore
 import UIKit
 
-class SearchLocation: BaseMapController {
+class SearchFilterLocation: BaseMapController {
     private let searchBar = UISearchBar()
     private let tableView = UITableView()
     private var locations = [MPLocation]()
+    
+    private func performSearchWithFilter(searchText: String) async {
+        // Search for Locations with the searchText in name, externalId and aliases
+        let query = MPQuery()
+        query.query = searchText.lowercased()
+        
+        // Only return Locations on the current floor and in the current building
+        let filter = MPFilter()
+        filter.floorIndex = NSNumber(value: mapControl?.currentFloorIndex ?? 0)
+        if let buildingId = mapControl?.currentBuilding?.buildingId {
+            filter.parents = [buildingId]
+            // Depth must be set to more than the default value of 1
+            // as Locations are two levels under Buildings (Building -> Floors -> Locations)
+            filter.depth = 2
+        }
+        
+        locations = await MPMapsIndoors.shared.locationsWith(query: query, filter: filter)
+    }
+    
+    private func performSearchNear(searchText: String) async {
+        // Search for Locations with the searchText in name, externalId and aliases
+        let query = MPQuery()
+        query.query = searchText.lowercased()
+        // If there is a currently selected Location, order results closer to that higher
+        if let selectedLocation = mapControl?.selectedLocation {
+            query.near = selectedLocation.position
+        }
+        
+        locations = await MPMapsIndoors.shared.locationsWith(query: query, filter: nil)
+    }
 
     override func setupController() async {
         setupUI()
@@ -57,17 +87,17 @@ class SearchLocation: BaseMapController {
     }
 }
 
-extension SearchLocation: UISearchBarDelegate {
+extension SearchFilterLocation: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         // This method is called whenever the text in the search bar changes
-        // You can search with MapsIndoors using the search text
+        // You can filter your locations here based on the search text
         if searchText.isEmpty {
             tableView.isHidden = true  // Hide the table view when there's no text
         } else {
             Task {
-                let query = MPQuery()
-                query.query = searchText.lowercased()
-                locations = await MPMapsIndoors.shared.locationsWith(query: query, filter: nil)
+                // To see different ways to get search results, you can call `performSearchNear` instead
+                await performSearchWithFilter(searchText: searchText)
+//                await performSearchNear(searchText: searchText)
                 tableView.isHidden = locations.isEmpty  // Hide the table view when there are no results
                 tableView.reloadData()
             }
@@ -83,7 +113,7 @@ extension SearchLocation: UISearchBarDelegate {
     }
 }
 
-extension SearchLocation: UITableViewDelegate {
+extension SearchFilterLocation: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // This method is called when the user selects a row in the table view
         // You can perform your action here
@@ -97,7 +127,7 @@ extension SearchLocation: UITableViewDelegate {
     }
 }
 
-extension SearchLocation: UITableViewDataSource {
+extension SearchFilterLocation: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return locations.count
     }

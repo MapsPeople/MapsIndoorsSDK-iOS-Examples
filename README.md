@@ -8,14 +8,14 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-- Xcode version 13
-- iOS version 13
+- Xcode version 15
+- iOS version 15
 
 ### Installing
 
 1. Clone the repository to your local machine.
 2. Navigate to the demo app directory.
-3. Open the `.xcworkspace` file in Xcode.
+3. Open the `.xcodeproj` file in Xcode.
 
 ### Configuration
 
@@ -30,4 +30,3 @@ This demo app uses Google Maps and Mapbox. To run the app, you need to provide y
     <key>MapboxAPIKey</key>
     <string>your_mapbox_api_key_here</string>
 </dict>
-

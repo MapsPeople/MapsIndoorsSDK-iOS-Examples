@@ -1,0 +1,87 @@
+{
+  "originHash" : "ed00a9bef6ef8600ed697e6fcc3d25e9a4e3efb56afdf27be462710972825f2f",
+  "pins" : [
+    {
+      "identity" : "ios-maps-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/googlemaps/ios-maps-sdk.git",
+      "state" : {
+        "revision" : "bd392d7d844b49ec6795871a3c25edd01ab839f2",
+        "version" : "8.4.0"
+      }
+    },
+    {
+      "identity" : "mapbox-common-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mapbox/mapbox-common-ios.git",
+      "state" : {
+        "revision" : "480f648b20b87a3a55f30bb6d76d6dc7d8412ec4",
+        "version" : "24.9.0"
+      }
+    },
+    {
+      "identity" : "mapbox-core-maps-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mapbox/mapbox-core-maps-ios.git",
+      "state" : {
+        "revision" : "af17fef6d11338c64b296d9374ce0c3479695532",
+        "version" : "11.9.2"
+      }
+    },
+    {
+      "identity" : "mapbox-maps-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mapbox/mapbox-maps-ios.git",
+      "state" : {
+        "revision" : "4793b133def738fef8d2ed0bd7c0b240640a8f40",
+        "version" : "11.9.1"
+      }
+    },
+    {
+      "identity" : "mapsindoors-core-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/MapsPeople/mapsindoors-core-ios.git",
+      "state" : {
+        "revision" : "f6b1be58b34a71ef64c65a0f6507da54a5a40b85",
+        "version" : "4.9.6"
+      }
+    },
+    {
+      "identity" : "mapsindoors-googlemaps-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/MapsPeople/mapsindoors-googlemaps-ios.git",
+      "state" : {
+        "revision" : "ca22b208641d3fa2bb000b9897306a3907de87c8",
+        "version" : "4.9.6"
+      }
+    },
+    {
+      "identity" : "mapsindoors-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/MapsPeople/mapsindoors-ios.git",
+      "state" : {
+        "revision" : "95281e94075e11ed00056b11eafbf8d24b4d753b",
+        "version" : "4.9.6"
+      }
+    },
+    {
+      "identity" : "mapsindoors-mapbox-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/MapsPeople/mapsindoors-mapbox-ios.git",
+      "state" : {
+        "revision" : "a73ff4fa1ef74ec399e87ab96b5947bdad870429",
+        "version" : "4.9.6"
+      }
+    },
+    {
+      "identity" : "turf-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mapbox/turf-swift.git",
+      "state" : {
+        "revision" : "bf840e6b9529d105687840fe2c9dcd74197d46d1",
+        "version" : "4.0.0"
+      }
+    }
+  ],
+  "version" : 3
+}

@@ -1,7 +1,6 @@
 import UIKit
 import MapsIndoorsCore
 import GoogleMaps
-import GoogleMapsCore
 import MapboxMaps
 
 class SettingsController: UIViewController {

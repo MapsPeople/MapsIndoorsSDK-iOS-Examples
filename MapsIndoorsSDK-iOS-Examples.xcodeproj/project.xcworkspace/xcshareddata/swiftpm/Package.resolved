@@ -42,8 +42,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/MapsPeople/mapsindoors-core-ios.git",
       "state" : {
-        "revision" : "f6b1be58b34a71ef64c65a0f6507da54a5a40b85",
-        "version" : "4.9.6"
+        "revision" : "e8178a6c0f1f54bf1f2d2440d93e1783b7c6435e",
+        "version" : "4.9.7"
       }
     },
     {
@@ -51,8 +51,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/MapsPeople/mapsindoors-googlemaps-ios.git",
       "state" : {
-        "revision" : "ca22b208641d3fa2bb000b9897306a3907de87c8",
-        "version" : "4.9.6"
+        "revision" : "a998a003ba319d420d6d97cb41709c4c6dd8c8cd",
+        "version" : "4.9.7"
       }
     },
     {
@@ -60,8 +60,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/MapsPeople/mapsindoors-ios.git",
       "state" : {
-        "revision" : "95281e94075e11ed00056b11eafbf8d24b4d753b",
-        "version" : "4.9.6"
+        "revision" : "17d3242f0d2d42288bb4515a53e9ef4d091dc738",
+        "version" : "4.9.7"
       }
     },
     {
@@ -69,8 +69,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/MapsPeople/mapsindoors-mapbox-ios.git",
       "state" : {
-        "revision" : "a73ff4fa1ef74ec399e87ab96b5947bdad870429",
-        "version" : "4.9.6"
+        "revision" : "76f4fe0cdf2af14fecc3417500b3fb71e09306b4",
+        "version" : "4.9.7"
       }
     },
     {

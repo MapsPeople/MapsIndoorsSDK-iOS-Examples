@@ -96,9 +96,9 @@ class DemoSelectorViewController: UITableViewController {
     private func setupMapProvider(index: Int) {
         switch index {
         case 0:
-            setupGoogleMaps()
-        case 1:
             setupMapBox()
+        case 1:
+            setupGoogleMaps()
         default:
             print("Invalid map provider index")
         }

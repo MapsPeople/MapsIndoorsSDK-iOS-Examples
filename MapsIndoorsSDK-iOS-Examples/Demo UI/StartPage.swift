@@ -7,7 +7,7 @@ class StartPage: UIViewController {
     
     @IBOutlet weak var mapProviderSegmentedControl: UISegmentedControl!
     
-    var selectedMapProvider: Int = 0
+    var selectedMapProvider = 0
     
     @IBAction func mapProviderChanged(_ sender: UISegmentedControl) {
         // Store the selected map provider when the segmented control value changes
@@ -23,7 +23,7 @@ class StartPage: UIViewController {
     }
     
     @IBAction func mapsPeople(_ sender: Any) {
-        presentDemoSelectorViewController(apiKey: "mapspeople")
+        presentDemoSelectorViewController(apiKey: "mapspeople3d")
     }
     
     @IBAction func customKey(_ sender: Any) {

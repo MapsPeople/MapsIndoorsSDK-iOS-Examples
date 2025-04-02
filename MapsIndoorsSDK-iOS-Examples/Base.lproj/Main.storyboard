@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bb0-FN-3Ax">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bb0-FN-3Ax">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -54,8 +55,8 @@
                                 <rect key="frame" x="16" y="5.6666666666666679" width="178" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="Google"/>
-                                    <segment title="MapBox"/>
+                                    <segment title="Mapbox Maps"/>
+                                    <segment title="Google Maps"/>
                                 </segments>
                                 <connections>
                                     <action selector="segmentControl:" destination="0xP-gz-R0c" eventType="valueChanged" id="yl8-K0-lig"/>
@@ -69,7 +70,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cRf-fm-0gs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="48" y="134"/>
+            <point key="canvasLocation" x="47" y="138"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tty-zC-ALs">
@@ -129,11 +130,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRm-9l-6lC">
-                                <rect key="frame" x="196" y="311" width="153" height="35"/>
+                                <rect key="frame" x="46" y="256" width="145" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" identifier="MapsPeopleButton"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="figure.pilates" catalog="system" title="MapsPeople">
+                                <buttonConfiguration key="configuration" style="plain" image="cube.fill" catalog="system" title="MapsPeople">
                                     <color key="baseForegroundColor" red="0.0" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -141,10 +142,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YtL-eY-c0X" userLabel="The White House">
-                                <rect key="frame" x="41" y="255" width="160" height="35"/>
+                                <rect key="frame" x="196" y="311" width="160" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="figure.pilates" catalog="system" title="White House">
+                                <buttonConfiguration key="configuration" style="plain" image="building.2.fill" catalog="system" title="White House">
                                     <color key="baseForegroundColor" red="0.0" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -159,26 +160,15 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FullLogo" translatesAutoresizingMaskIntoConstraints="NO" id="zjS-aW-PGc">
-                                <rect key="frame" x="96" y="104" width="198" height="96"/>
+                                <rect key="frame" x="97" y="103" width="198" height="96"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5xB-0M-Djg">
-                                <rect key="frame" x="41" y="311" width="135" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="figure.pilates" catalog="system" title="3D Map">
-                                    <color key="baseForegroundColor" red="0.0" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="dMap:" destination="bCL-uS-2UQ" eventType="touchUpInside" id="kyH-as-WAP"/>
-                                </connections>
-                            </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2d0-aV-L6y">
-                                <rect key="frame" x="187" y="375" width="162" height="32"/>
+                                <rect key="frame" x="92" y="586" width="209" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="GoogleMap"/>
-                                    <segment title="Mapbox"/>
+                                    <segment title="Mapbox Maps"/>
+                                    <segment title="Google Maps"/>
                                 </segments>
                                 <connections>
                                     <action selector="mapProviderChanged:" destination="bCL-uS-2UQ" eventType="valueChanged" id="mHe-NH-thK"/>
@@ -188,11 +178,22 @@
                                 <rect key="frame" x="196" y="255" width="153" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="figure.pilates" catalog="system" title="Custom Key">
+                                <buttonConfiguration key="configuration" style="plain" image="key.fill" catalog="system" title="Custom Key">
                                     <color key="baseForegroundColor" red="0.0" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="customKey:" destination="bCL-uS-2UQ" eventType="touchUpInside" id="H3v-Do-h7v"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5xB-0M-Djg">
+                                <rect key="frame" x="41" y="311" width="135" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="star.fill" catalog="system" title="3D Map">
+                                    <color key="baseForegroundColor" red="0.0" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="dMap:" destination="bCL-uS-2UQ" eventType="touchUpInside" id="kyH-as-WAP"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -208,7 +209,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tyz-P0-11o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-695.38461538461536" y="138.6255924170616"/>
+            <point key="canvasLocation" x="-695.41984732824426" y="138.02816901408451"/>
         </scene>
         <!--Settings Controller-->
         <scene sceneID="olv-aY-NUu">
@@ -321,10 +322,13 @@
         <image name="FullLogo" width="1016" height="212"/>
         <image name="Small" width="20" height="26"/>
         <image name="arrow.down" catalog="system" width="118" height="128"/>
-        <image name="desktopcomputer.and.arrow.down" catalog="system" width="128" height="113"/>
+        <image name="building.2.fill" catalog="system" width="108" height="128"/>
+        <image name="cube.fill" catalog="system" width="128" height="128"/>
+        <image name="desktopcomputer.and.arrow.down" catalog="system" width="128" height="115"/>
         <image name="engine.combustion" catalog="system" width="128" height="79"/>
-        <image name="figure.pilates" catalog="system" width="128" height="77"/>
         <image name="hammer" catalog="system" width="128" height="117"/>
+        <image name="key.fill" catalog="system" width="82" height="128"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
